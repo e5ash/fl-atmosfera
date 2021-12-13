@@ -1,0 +1,60 @@
+@import ../../sass/vars
+
+.btn
+	z-index: 1
+	position: relative
+	display: flex
+	align-items: center
+	justify-content: center
+	text-align: center
+	cursor: pointer
+	font-size: $fzMain
+	font-family: $ffMain
+	overflow: hidden
+	border: none
+	background-color: transparent
+	transition: .3s
+	outline: none
+	border-bottom: none
+	&.--sm
+		height: 30px
+		border-radius: 10px
+	&.--smm
+		height: 40px
+		border-radius: 10px
+	&.--md
+		height: 50px
+		border-radius: 10px
+	&.--bg-orange
+		color: #fff
+		background-color: $orange
+		&:hover
+			background-color: $bluel
+	&.--bg-yellow
+		color: $black
+		background: #F4DF21
+		&:hover
+			color: #fff
+			background-color: $bluel
+	&.--bg-red
+		color: #fff
+		background-color: #A30405
+		&:hover
+			color: #fff
+			background-color: $bluel
+	&.--b-orange
+		font-size: 14px
+		border: 2px solid $orange
+		u
+			margin-right: 10px
+		span
+			padding-top: 2px
+		&:hover
+			// color: #fff
+			// background-color: $bluel
+			border-color: $bluel
+			// img, svg, path, circle, rect, line
+			// 	// &[fill]
+			// 	// 	fill: #fff
+			// 	&[stroke]
+			// 		stroke: #fff

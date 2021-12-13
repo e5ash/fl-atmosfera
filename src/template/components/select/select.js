@@ -9,7 +9,7 @@ class Select {
     this.element = element;
     this.settings = settings;
     this.title = element.querySelector('.select__title');
-    this.parse = this.element.querySelector('.select__parse');
+    this.parse = this.element.querySelector('select');
     this.options = this.parse.querySelectorAll('option');
     this.placeholder = this.element.getAttribute('data-placeholder');
     this.field = this.element.querySelector('.field');
@@ -21,6 +21,7 @@ class Select {
       }
     });
     this.placeholder = selectedOption ? selectedOption.innerText : this.placeholder ? this.placeholder : this.options[0].innerText;
+
     this.title.innerText = this.placeholder;
     this.onClick();
     this.createList();

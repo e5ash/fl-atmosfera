@@ -8,11 +8,12 @@ html(lang="ru")
 		title=title
 	body
 		.wrap
+			script(src="https://unpkg.com/imask")
+			link(rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css")
 			link(rel="stylesheet" href="template/css/style.css" + version)
 
 			+style('header', 'blocks')
 			include ../../blocks/header/header
-			+script('header', 'blocks')
 			
 			main.main
 				block content
@@ -20,4 +21,10 @@ html(lang="ru")
 			+style('footer', 'blocks')
 			include ../../blocks/footer/footer
 
+			+script('field', 'components')
+			+script('check', 'components')
+			+script('select', 'components')
+			+script('popup', 'components')
+
+			script(src="https://unpkg.com/swiper@7/swiper-bundle.min.js")
 			script(src="template/js/common.js" + version)

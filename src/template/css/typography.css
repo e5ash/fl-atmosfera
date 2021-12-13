@@ -9,3 +9,53 @@
 .tar {
   text-align: right;
 }
+
+.h1 {
+  font-size: 64px;
+  line-height: 63px;
+}
+
+.h2 {
+  font-size: 50px;
+  line-height: 1.14;
+}
+
+.h3 {
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.h4 {
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+}
+
+.t1 {
+  font-size: 20px;
+  line-height: 1.31;
+  font-weight: 400;
+}
+.t1 ul {
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.t1 ul:last-child {
+  margin-bottom: 0;
+}
+.t1 li {
+  position: relative;
+  padding-left: 30px;
+}
+.t1 li:before {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #3F3F3F;
+}

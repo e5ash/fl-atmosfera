@@ -12,9 +12,12 @@
 		width: 100%
 		border: 1px solid transparent
 	&__title
+		line-height: 16px
 		white-space: nowrap
 		text-overflow: ellipsis
+		overflow: hidden
 	&__icon
+		margin-left: auto
 		svg
 			transition: $t
 	&__drop
@@ -36,29 +39,36 @@
 	&__parse
 		display: none
 
-	&.--md
+	&.--sm
+		font-weight: 400
 		.select
 			&__area
-				min-height: 50px
-				padding-left: 10px
-				padding-right: 10px
+				height: 30px
+				padding-left: 20px
+				padding-right: 20px
+				border-radius: 10px
+			&__title
+				font-size: 14px
+				color: #3F3F3F
 			&__drop
-				max-height: 200px 
+				max-height: 200px
+				border-radius: 0 0 10px 10px
 			&__item
-				padding: 5px 10px
+				font-size: 14px
+				padding: 5px 20px
 
-	&.--b-gray
+	&.--bg-gray
 		.select
 			&__area
-				border-radius: $radius
-				border-color: $c-lines
+				background: #F1F1F1
 			&__drop
-				border-radius: 0 0 $radius $radius
-				border-color: $c-lines
-				background-color: #fff
+				background-color: #F1F1F1
 			&__item
+				&:hover
+					background-color: darken(#F1F1F1, 2%)
 				&.--selected
-					background-color: $c-lines
+					background-color: darken(#F1F1F1, 5%)
+					
 	&.--open
 		z-index: 5
 		.select
