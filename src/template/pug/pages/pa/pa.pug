@@ -1,0 +1,62 @@
+extends ../../templates/default
+block vars
+	-
+		title = "Личный кабинет"
+		breadcrumbs = [
+			['', '.html'],
+			[title]
+		]
+block content
+	include ../../../blocks/intro/intro
+	include ../../../blocks/sports/sports
+	.page
+		.case
+			// +breadcrumbs
+			.page__wrap.row
+				.page__aside
+					include ../../../blocks/navus/navus
+				.page__section
+					.page__head
+						.page__icon
+							img(src="uploads/" alt="")
+						.page__title.h3= title
+					.page__body
+						.page__hist.hist
+							.hist__filter
+								.hist__title История заказов
+								.hist__select.select.--sm.--bg-gray(data-placeholder="Выберите статус ")
+									.select__wrap
+										.select__area
+											.select__title
+											.select__icon
+												<svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.01733L5 5.23066L9 1.01733" stroke="#3F3F3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+										.select__drop
+										select.select__parse
+											option(value="Статус 1") Статус 1
+											option(value="Статус 2") Статус 2
+											option(value="Статус 3") Статус 3
+								.hist__search.search
+									.search__field.field.--sm.--bg-gray
+										.field__wrap
+											input.field__area(type="text" placeholder="Поиск...")
+									.search__btn.btn
+										<svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.9073 6.12119C10.9073 9.11026 8.60453 11.4706 5.83954 11.4706C3.07455 11.4706 0.771784 9.11026 0.771784 6.12119C0.771784 3.13213 3.07455 0.771784 5.83954 0.771784C8.60453 0.771784 10.9073 3.13213 10.9073 6.12119Z" stroke="#C0C0C0" stroke-width="1.54357"/><rect width="6.11764" height="1.86908" rx="0.93454" transform="matrix(0.699733 0.714405 -0.680691 0.732571 9.71875 9.26025)" fill="#B2B2B2"/></svg>
+							table.hist__table
+								thead
+									tr
+										th Номер
+										th Статус
+										th Стоимость
+										th Получатель
+										th Дата создания
+										th Дата изменения
+										th Действия
+								tbody
+									tr
+										td 1
+										td Оплачен
+										td 1 000 руб.
+										td Иванов С.
+										td 01.10.2021
+										td 02.10.2021
+										td В работе

@@ -1,0 +1,61 @@
+extends ../../templates/default
+block vars
+	-
+		title = ""
+		breadcrumbs = [
+			['', '.html'],
+			[title]
+		]
+block content
+	include ../../../blocks/intro/intro
+	include ../../../blocks/sports/sports
+	.page
+		.case
+			+breadcrumbs
+			.page__wrap.row
+				.page__aside
+					include ../../../blocks/navus/navus
+				.page__section
+					.page__head
+						.page__icon
+							img(src="uploads/" alt="")
+						.page__title.h3= title
+					.page__body
+						.comments
+							.comments__title Комментарии
+							.comments__wrap
+								.comments__new
+									.comments__avatar.img
+										img(src="uploads/" alt="")
+									.comments__area
+										.comments__data
+											.comments__user Галина Миронова
+											.comments__controls.row
+												.comments__control
+												.comments__control
+												.comments__control
+											.comments__date 22 октября 2021 г. 16.35
+										.comments__field.field
+											.field__wrap
+												textarea.field__area(name="")
+												.field__placeholder Написать комментарий
+										.comments__btns.row
+											button.comments__btn.btn.--md.--bg-orange Ответить
+											button.comments__btn.btn.--md.--b-red Удалить
+								.comments__list
+									.comments__item
+										.comments__avatar.img
+											img(src="uploads/" alt="")
+										.comments__area
+											.comments__data
+												.comments__user Галина Миронова
+												.comments__controls.row
+													.comments__control
+													.comments__control
+													.comments__control
+												.comments__date 22 октября 2021 г. 16.35
+											.comments__text
+												.comments__text-inner Прекрасная съемка. Отличные фото.
+												.comments__text-like
+											.comments__btns.row
+												button.comments__btn.btn.--md.--b-red Удалить

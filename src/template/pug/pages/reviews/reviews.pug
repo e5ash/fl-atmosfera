@@ -1,0 +1,58 @@
+extends ../../templates/default
+block vars
+	-
+		title = "Отзывы"
+		breadcrumbs = [
+			['', '.html'],
+			[title]
+		]
+block content
+	include ../../../blocks/intro/intro
+	include ../../../blocks/sports/sports
+	.page
+		.case
+			+breadcrumbs
+			.page__wrap.row
+				.page__aside
+					include ../../../blocks/navus/navus
+				.page__section
+					.page__head
+						.page__icon
+							img(src="uploads/" alt="")
+						.page__title.h3= title
+						a.page__btn.--md.--bg-orange(href="")
+					.page__body
+						.page__reviews.reviews
+							.reviews__review.review
+								.review__list
+									.review__item
+										.review__title Ваше имя
+										.review__inner
+											.review__field.field.--smm.--bg-white
+												.field__wrap
+													input.field__area(type="text" name="")
+									.review__item
+										.review__title Email*
+										.review__inner
+											.review__field.field.--smm.--bg-white.--email
+												.field__wrap
+													input.field__area(type="text" name="")
+									.review__item
+										.review__title Комментарий
+										.review__inner
+											.review__field.field.--smm.--bg-white
+												.field__wrap
+													textarea.field__area(name="")
+									.review__item
+										.review__title Введите сумму 6 + 7
+										.review__inner
+											.review__field.field.--smm.--bg-white
+												.field__wrap
+													input.field__area(type="text" name="")
+									.review__item
+										.review__inner
+											button.review__btn.--md.--bg-orange Написать
+							.reviews__list
+								+reviewsItem('Юрий 07 марта 2017', 'Был с ребенком на турнире… сам пофоткал....., не то конечно, у вас снимки отличные! но ЦЕНА! На сувениры еще понятно, но на фотографии… особенно цифровые… Вы же их даже не обрабатываете. За что такая цена? Я все-таки думаю купить конечно, но рублей по 100 я бы купил 10 фото или больше и считал бы, что это нормально, но отдать 1000р за 5 фото — это уже дорого. Куплю максимум 1-2 фото. И кстати, вы же делаете много кадров, родители с радостью будут выкупать их все, но мотивируйте их брать больше — сделайте например скидки от количества фотографий. Поверьте — прибыль и довольных постоянных клиентов будет больше.')
+								+reviewsItem('Атмосфера Спорта', 'Доброго вечера. Спасибо за комментарии к нашей работе. Вместе с Вами мы придем к удобной и эффективной ценовой политике. Мы изменили с сегодняшнего дня ценообразование: 1. 1-5 — 200 р. 2. С 6-30 фотографии скидка 25% (т.е., если 30 фотографий, 5*200+25*150). 3. С 31 фотографии скидка 50% (5*200+25*150+х*100). Надеюсь это увеличит эффективность нашего взаимодействия. Спасибо за понимание.')
+							.reviews__btn #[span.link Ответить]

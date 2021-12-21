@@ -1,0 +1,42 @@
+extends ../../templates/default
+block vars
+	-
+		title = "Фотосток"
+		breadcrumbs = [
+			['', '.html'],
+			[title]
+		]
+block content
+	include ../../../blocks/intro/intro
+	include ../../../blocks/sports/sports
+	.page
+		.case
+			// +breadcrumbs
+			.page__wrap.row
+				.page__aside
+					include ../../../blocks/navus/navus
+				.page__section
+					.page__head
+						.page__icon
+							img(src="uploads/" alt="")
+						.page__title.h3= title
+					.page__body
+						.fotostok
+							.fotostok__list.row
+								+fotostokItem('Гандбол', '', '')
+								+fotostokItem('Футбол', '', '')
+								+fotostokItem('Флорбол', '', '')
+								+fotostokItem('Водные виды спорта', '', '')
+								+fotostokItem('Фигурное катание', '', '')
+								+fotostokItem('Пляжный волейбол', '', '')
+								+fotostokItem('Танцы', '', '')
+								+fotostokItem('Фехтование', '', '')
+								+fotostokItem('Большой тенис', '', '')
+								+fotostokItem('Хокей', '', '')
+								+fotostokItem('Футзал', '', '')
+								+fotostokItem('Гимнастика', '', '')
+								+fotostokItem('Баскетбол', '', '')
+								+fotostokItem('Боевые единоборства', '', '')
+								+fotostokItem('Бадминтон', '', '')
+								+fotostokItem('Спорт для семьи', '', '')
+								+fotostokItem('Детское творчество', '', '')

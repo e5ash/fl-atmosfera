@@ -1,3 +1,115 @@
 include mixins/style
 include mixins/script
 include mixins/breadcrumbs
+
+mixin fotostokItem(name, img, icon)
+	a.fotostok__item(href="")
+		.fotostok__img.img
+			img(src=img alt="")
+		.fotostok__name=name
+		.fotostok__icon
+			img(src=icon alt="")
+
+mixin sectionItem(name, img, dates, desc)
+	.section__item
+		.section__dates
+			each date in dates
+				.section__date= date
+		.section__img
+			img(src=img alt="")
+		.section__name= name
+		.section__desc= desc
+
+mixin catsItem(name, img)
+	a.cats__item(href="")
+		.cats__img
+			img(src="uploads/" + img alt="")
+		.cats__name= name
+
+
+mixin psetting()
+	.product__setting.psetting
+		.psetting__list
+			.psetting__item
+				.psetting__title Цена
+				.psetting__wrap
+					.psetting__field.field.--sm.--b-gray
+						.field__wrap
+							input.field__area(type="tel" name="" value="0" readonly="readonly")
+				.psetting__desc рублей
+			.psetting__item
+				.psetting__title Количество
+				.psetting__wrap
+					.psetting__field.field.--sm.--b-gray.--indec
+						.field__wrap
+							input.field__area(type="tel" name="" value="1")
+				.psetting__desc шт.
+			.psetting__item
+				.psetting__title Мероприятие
+				.psetting__wrap
+					.psetting__select.select.--sm.--b-gray
+						.select__area
+							.select__title
+							.select__icon
+								<svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.01733L5 5.23066L9 1.01733" stroke="#3F3F3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+						.select__drop
+						select.select__parse
+							option(value="ДТ Вдохновение Золотого кольца" selected="selected") ДТ Вдохновение Золотого кольца
+							option(value="ДТ Вдохновение Золотого кольца") ДТ Вдохновение Золотого кольца
+							option(value="ДТ Вдохновение Золотого кольца") ДТ Вдохновение Золотого кольца
+				.psetting__desc
+			.psetting__item
+				.psetting__title Пакет
+				.psetting__wrap
+					.psetting__select.select.--sm.--b-gray
+						.select__area
+							.select__title
+							.select__icon
+								<svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.01733L5 5.23066L9 1.01733" stroke="#3F3F3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+						.select__drop
+						select.select__parse
+							option(value="") Индивидуальный (номер, выступление)
+							option(value="") Коллектив (один номер, выступление)
+							option(value="") 
+				.psetting__desc
+			.psetting__item
+				.psetting__title Примечание
+				.psetting__wrap
+					.psetting__field.field.--sm.--b-gray
+						.field__wrap
+							textarea.field__area(name="" placeholder="Введите ФИО участника, команду, группу, номер выступления, игрока, а также Ваш контактный телефон для связи")
+				.psetting__desc
+			.psetting__item
+				.psetting__title
+				.psetting__wrap
+					button.psetting__btn.btn.--md.--bg-orange Добавить в корзину
+				.psetting__desc
+
+
+mixin psettingSelect(list)
+	.psetting__select.select.--sm.--b-gray
+		.select__area
+			.select__title
+			.select__icon
+				<svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.01733L5 5.23066L9 1.01733" stroke="#3F3F3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+		.select__drop
+		select.select__parse
+			- i = 0
+			each item in list
+				option(value=item selected=i==0 ? "selected" : null)= item
+				- i++ 
+mixin reviewsItem(title, text)
+	.reviews__item
+		.reviews__title= title
+		.reviews__text= text
+
+mixin imgs(img)
+	.product__imgs.imgs
+		.imgs__main
+			.imgs__list
+				.imgs__item.img
+					img(src="uploads/" + img alt="")
+		.imgs__nav
+			.imgs__nav-list
+				.imgs__nav-item.img
+					img(src="uploads/" + img alt="")

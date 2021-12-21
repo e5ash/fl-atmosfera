@@ -1,0 +1,27 @@
+extends ../../templates/default
+block vars
+	-
+		title = "Результаты поиска"
+		breadcrumbs = [
+			['', '.html'],
+			[title]
+		]
+block content
+	include ../../../blocks/intro/intro
+	include ../../../blocks/sports/sports
+	.page
+		.case
+			+breadcrumbs
+			.page__wrap.row
+				.page__aside
+					include ../../../blocks/navus/navus
+				.page__section
+					.page__head
+						.page__icon
+							img(src="uploads/" alt="")
+						.page__title.h3= title
+					.page__body
+						.psearch
+							.psearch__value
+							.psearch__list.row
+								.psearch__item

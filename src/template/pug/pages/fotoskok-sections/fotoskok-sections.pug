@@ -1,0 +1,32 @@
+extends ../../templates/default
+block vars
+	-
+		title = "Детское творчество"
+		breadcrumbs = [
+			['', '.html'],
+			[title]
+		]
+block content
+	include ../../../blocks/intro/intro
+	include ../../../blocks/sports/sports
+	.page
+		.case
+			+breadcrumbs
+			.page__wrap.row
+				.page__aside
+					include ../../../blocks/navus/navus
+				.page__section
+					.page__head
+						.page__icon
+							img(src="uploads/" alt="")
+						.page__title.h3= title
+					.page__body
+						.sections
+							.sections__list.row
+								mixin sectionsItem(name, img)
+									a.sections__item(href="")
+										.sections__name= name
+										.sections__img
+											img(src=img alt="")
+								+sectionsItem('Фото', '')
+								+sectionsItem('Видео', '')

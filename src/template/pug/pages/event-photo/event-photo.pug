@@ -1,0 +1,59 @@
+extends ../../templates/default
+block vars
+	-
+		title = 'Турнир по футболу "Baltic Cup 2021" среди команд 2013 г.р. (U8). Арена ЦФП "Восхождение" 02.10.2021'
+		breadcrumbs = [
+			['Фотосток', 'fotoskok.html'],
+			['Футбол', 'fotoskok-section.html'],
+			[title]
+		]
+block content
+	include ../../../blocks/intro/intro
+	include ../../../blocks/sports/sports
+	.page
+		.case
+			+breadcrumbs
+			.page__wrap.row
+				.page__aside
+					include ../../../blocks/navus/navus
+				.page__section
+					.page__head
+						.page__icon
+							img(src="uploads/" alt="")
+						.page__title.h3= title
+					.page__body
+						.shooting
+							.shooting__img.img
+								img(src="uploads/" alt="")
+							.shooting__text
+								p Съемку производил Иванов Сергей Иванович
+								p Пожалуйста оцените его работу и оставьте свой комментарий
+								p Комментарии могут оставлять только авторизированные пользователи
+							a.shooting__btn-comment.btn.--md.--bg-orange(href="") Оставить комментарий
+						.do
+							.do__list.row
+								.do__item
+									.do__icon
+										img(src="uploads/" alt="")
+									.do__text Цены на скачивание и печать фото можно посмотреть #[a(href="") здесь]
+
+								.do__item
+									.do__icon
+										img(src="uploads/" alt="")
+									.do__text С помощью нашего #[a(href="") конструктора] вы можете заказать сувинирную продукцию с любым понравившимся изображением вашего ребенка
+
+						.phs
+							.phs__list.row
+								a.phs__item(href="")
+									.phs__name Командные фото 
+									.phs__img.img
+										img(src="uploads/" alt="")
+								a.phs__item(href="")
+									.phs__name Игры турнира
+									.phs__img.img
+										img(src="uploads/" alt="")
+								a.phs__item(href="")
+									.phs__name Церимония награждения
+									.phs__img.img
+										img(src="uploads/" alt="")
+

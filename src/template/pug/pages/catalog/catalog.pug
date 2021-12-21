@@ -1,0 +1,41 @@
+extends ../../templates/default
+block vars
+	-
+		title = "Каталог продукции"
+		breadcrumbs = [
+			['', catalog-'.html'],
+			[title]
+		]
+block content
+	include ../../../blocks/intro/intro
+	include ../../../blocks/sports/sports
+	.page
+		.case
+			// +breadcrumbs
+			.page__wrap.row
+				.page__aside
+					include ../../../blocks/navus/navus
+				.page__section
+					.page__head
+						.page__icon
+							img(src="uploads/" alt="")
+						.page__title.h3= title
+					.page__body
+						.page__catalog.catalog
+							.catalog__list
+								mixin catalogItem(name, href, img)
+									a.catalog__item(href=href)
+										.catalog__name= name
+										.catalog__img
+											img(src="uploads/" + img alt="")
+								+catalogItem('Коллаж (печать)', 'catalog-collage.html', '')
+								+catalogItem('Фото (печать)', 'catalog-photo-print.html', '')
+								+catalogItem('Магнит на холодильник', 'catalog-magnet.html', '')
+								+catalogItem('Диплом', 'catalog-diplom.html', '')
+								+catalogItem('Календирь на холодильник', 'catalog-calendar.html', '')
+								+catalogItem('Часы', 'catalog-clocks.html', '')
+								+catalogItem('Брелок', 'catalog-keychain.html', '')
+								+catalogItem('Тарелка', 'catalog-plate.html', '')
+								+catalogItem('Наклейка на автомобиль', 'catalog-sticker.html', '')
+								+catalogItem('Фото цифровое', 'catalog-photo.html', '')
+								+catalogItem('Видеозапись', 'catalog-video.html', '')

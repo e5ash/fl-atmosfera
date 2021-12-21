@@ -1,0 +1,122 @@
+extends ../../templates/default
+block vars
+	-
+		title = "Оформление заказа"
+		breadcrumbs = [
+			['', '.html'],
+			[title]
+		]
+block content
+	include ../../../blocks/intro/intro
+	include ../../../blocks/sports/sports
+	.page
+		.case
+			// +breadcrumbs
+			.page__wrap.row
+				.page__aside
+					include ../../../blocks/navus/navus
+				.page__section
+					.page__head
+						.page__icon
+							img(src="uploads/" alt="")
+						.page__title.h3= title
+					.page__body
+						.order.row
+							.order__wrap
+								.order__list
+									.order__item
+										.order__item-head.row
+											.order__item-count 1
+											.order__item-title Укажите данные покупателя
+										.order__item-body
+											.order__fields.row
+												.order__field.field.--sm.--b-gray.--email
+													.field__wrap
+														input.field__area(type="text" placeholder="Email*")
+												.order__field.field.--sm.--b-gray.--phone
+													.field__wrap
+														input.field__area(type="tel" placeholder="Телефон*")
+												.order__field.field.--sm.--b-gray.--name
+													.field__wrap
+														input.field__area(type="text" placeholder="ФИО*")
+									.order__item
+										.order__item-head.row
+											.order__item-count 2
+											.order__item-title Выбирите способ доставки
+										.order__item-body
+											.order__radios.radios
+												.radios__radio.check.radio.--disabled
+													input.check__input(type="radio" name="delivery" value="Отправка файла на Email")
+													.radio__box
+													.radio__wrap Отправка файла на Email
+												.radios__radio.check.radio
+													input.check__input(type="radio" name="delivery" value="Самовывоз (цифра будет отправлена на email)")
+													.radio__box
+													.radio__wrap Самовывоз (цифра будет отправлена на email)
+
+									.order__item
+										.order__item-head.row
+											.order__item-count 3
+											.order__item-title Выбирите способ оплаты
+										.order__item-body
+											.order__radios.radios
+												.radios__radio.check.radio
+													input.check__input(type="radio" name="pay" value="Оплата через Яндекс")
+													.radio__box
+													.radio__wrap Оплата через Яндекс
+												.radios__radio.check.radio
+													input.check__input(type="radio" name="pay" value="Банковские карты VISA, MasterCard, Maestro")
+													.radio__box
+													.radio__wrap Банковские карты VISA, MasterCard, Maestro
+												.radios__radio.check.radio
+													input.check__input(type="radio" name="pay" value="Наличными в кассах и терминалах партнеров")
+													.radio__box
+													.radio__wrap Наличными в кассах и терминалах партнеров
+								.order__final
+									.order__promo.promocode
+										.promocode__field.field.--sm.--b-gray
+											.field__wrap
+												input.field__area(type="text" placeholder="Промо-код")
+										button.promocode__btn.btn.--sm.--bg-gray Применить
+									.order__comment.field.--md.--b-gray
+										.field__wrap
+											textarea.field__area(name="" placeholder="Примечание к заказу")
+									.order__total
+										.order__total-title Итого
+										.order__total-value 350 ₽
+									.order__foot
+										.order__alert Поле обязательно к заполнению
+										button.order__btn-submit.btn.--md.--bg-orange Оформить заказ
+
+									.order__desc
+										p Нажимая "Оформить заказ", я подтверждаю, что ознакомлен с информацией о товаре и принимаю #[a(href="") условия договора] купли-продажи и даю #[a(href="") согласие] на обработку моих персональных данных.
+										p В соответствии с ФЗ №54-ФЗ кассовый чек при заказе с доставкой будет предоставлен в электронном виде на указанный при оформлении заказа номер телефона или адрес электронной почты.
+							.order__cart.ocart
+								.ocart__title Ваша корзина
+								.ocart__list
+									.ocart__item
+										.ocart__img.img
+											img(src="" alt="")
+										.ocart__name Фото цифровое
+										.ocart__incdec.incdec
+											button.incdec__btn.btn.--minus
+											.incdec__field.field
+												.field__wrap
+													input.field__area(type="tel" value="1")
+											button.incdec__btn.btn.--plus
+										.ocart__price 100 ₽
+									.ocart__item
+										.ocart__img.img
+											img(src="" alt="")
+										.ocart__name Брелок
+										.ocart__incdec.incdec
+											button.incdec__btn.btn.--minus
+											.incdec__field.field
+												.field__wrap
+													input.field__area(type="tel" value="1")
+											button.incdec__btn.btn.--plus
+										.ocart__price 250 ₽
+								.ocart__total
+									.ocart__total-title Итого
+									.ocart__total-value 350 ₽
+								button.ocart__btn-next.btn.--md.--bg-orange Продолжить покупки

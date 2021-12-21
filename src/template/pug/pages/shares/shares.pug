@@ -1,0 +1,34 @@
+extends ../../templates/default
+block vars
+	-
+		title = "Акции"
+		breadcrumbs = [
+			['', '.html'],
+			[title]
+		]
+block content
+	include ../../../blocks/intro/intro
+	include ../../../blocks/sports/sports
+	.page
+		.case
+			// +breadcrumbs
+			.page__wrap.row
+				.page__aside
+					include ../../../blocks/navus/navus
+				.page__section
+					.page__head
+						.page__icon
+							img(src="uploads/" alt="")
+						.page__title.h3= title
+					.page__body
+						.page__shares.shares
+							.shares__list
+								mixin sharesItem()
+									.shares__item
+										.shares__img.img
+											img(src="uploads/" alt="")
+										.shares__name Открытый кубок Азбуки Спорта февраль 2017
+										.shares__text
+											p Оформите заказ на видеозапись матчей с турнира и получите суперпредложение - 500 руб. за одну видеозапись.
+											p Успейте до конца апреля!
+								+sharesItem()

@@ -1,0 +1,59 @@
+extends ../../templates/default
+block vars
+	-
+		title = "Командные фото 02.10.2021"
+		breadcrumbs = [
+			['Фотосток', 'fotoskok.html'],
+			['Футбол', 'fotoskok-section.html'],
+			['Турнир по футболу "Baltic Cup 2021" среди команд 2013 г.р. (U8). Арена ЦФП "Восхождение" 02.10.2021', 'event-photos.html'],
+			[title]
+		]
+block content
+	include ../../../blocks/intro/intro
+	include ../../../blocks/sports/sports
+	.page
+		.case
+			+breadcrumbs
+			.page__wrap.row
+				.page__aside
+					include ../../../blocks/navus/navus
+				.page__section
+					.page__head
+						.page__icon
+							img(src="uploads/" alt="")
+						.page__title.h3= title
+					.page__body
+						.photos
+							.photos__title Оцените работу нашего фотографа
+							.photos__list.row
+								mixin photosItem()
+									.photos__item
+										.photos__img.img
+											img(src="uploads/" alt="")
+										.photos__controls.ctrls
+											.ctrls__btns
+												.ctrls__btn
+												.ctrls__btn
+												.ctrls__btn
+											.ctrls__likes
+												.ctrls__like
+													.ctrls__like-value 10
+													.ctrls__like-icon
+												.ctrls__like
+													.ctrls__like-value 3
+													.ctrls__like-icon
+								+photosItem()
+								+photosItem()
+								+photosItem()
+								+photosItem()
+								+photosItem()
+								+photosItem()
+								+photosItem()
+								+photosItem()
+								+photosItem()
+								+photosItem()
+								+photosItem()
+								+photosItem()
+								+photosItem()
+								+photosItem()
+								+photosItem()

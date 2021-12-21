@@ -1,0 +1,39 @@
+extends ../../templates/default
+block vars
+	-
+		title = "Мастер-класс"
+		breadcrumbs = [
+			['', '.html'],
+			[title]
+		]
+block content
+	include ../../../blocks/intro/intro
+	include ../../../blocks/sports/sports
+	.page
+		.case
+			// +breadcrumbs
+			.page__wrap.row
+				.page__aside
+					include ../../../blocks/navus/navus
+				.page__section
+					.page__head
+						.page__icon
+							img(src="uploads/" alt="")
+						.page__title.h3= title
+					.page__body
+						.page__mc
+							h2 Дорогие друзья!
+							p 17 сентября на стадионе «Динамо» прошёл мастер-класс от АЗБУКИ СПОРТА и Руслана Нигматуллина.
+							img(src="uploads/" alt="" style="float: left")
+							ul.ul-cup
+								li Чемпион России: 1996, 1997, 2004
+								li Обладатель Кубка России: 1999/00, 2000/01
+								li Лучший футболист России: 2001
+								li Лучший спортсмен России: 2001
+								li «Вратарь года»: 2000, 2001
+							p Руслан выступал за множество клубов и радовал нас великолепной игрой на вратарской позиции. В конце 90-х – начале 2000-х Нигматуллин являлся вратарём №1 не только в московском Локомотиве, но и в национальной сборной России.
+							.video
+								.video__play
+								.video__poster.img
+									img(src="" alt="")
+

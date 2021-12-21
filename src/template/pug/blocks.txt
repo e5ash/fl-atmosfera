@@ -6,3 +6,23 @@ include ../../blocks/header/header
 +style('footer', 'blocks')
 include ../../blocks/footer/footer
 
+//- intro 
++style('intro', 'blocks')
+include ../../blocks/intro/intro
+
+//- sport 
++style('sport', 'blocks')
+include ../../blocks/sport/sport
+
+//- sports 
++style('sports', 'blocks')
+include ../../blocks/sports/sports
+
+//- sitemap 
++style('sitemap', 'blocks')
+include ../../blocks/sitemap/sitemap
+
+//- navus 
++style('navus', 'blocks')
+include ../../blocks/navus/navus
+

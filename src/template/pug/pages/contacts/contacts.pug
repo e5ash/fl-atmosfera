@@ -1,0 +1,44 @@
+extends ../../templates/default
+block vars
+	-
+		title = "Контакты"
+		breadcrumbs = [
+			['', '.html'],
+			[title]
+		]
+block content
+	include ../../../blocks/intro/intro
+	include ../../../blocks/sports/sports
+	.page
+		.case
+			+breadcrumbs
+			.page__wrap.row
+				.page__aside
+					include ../../../blocks/navus/navus
+				.page__section
+					.page__head
+						.page__icon
+							img(src="uploads/" alt="")
+						.page__title.h3= title
+					.page__body
+						.page__contacta.contacts
+							.contacts__logo
+								img(src="" alt="")
+							.contacts__data
+								p <b>Общество с ограниченной ответственностью «Атмосфера Спорта»</b>
+								p <b>E-mail</b> #[a(href="mailto:zakaz@a-online.ru") zakaz@a-online.ru]
+								p <b>Телефон</b> #[a(href="tel:+78129294590") +7-812-929-45-90] <br><br>
+								p <b>ИНН</b> 7806255286
+								p <b>КПП</b> 780601001
+								p <b>ОГРН</b> 1167847431806
+								p <b>ОКПО</b> 05485150
+								p <b>ОКТМО</b> 40352000000
+								p <b>Юр.адрес:</b> 195030 г. Санкт-Петербург ул. Шоссе Революции 114 литера А оф. 153
+								p <b>Генеральный директор</b> Камзин Илья Леонидович
+								p <b>т. +7 (812) 929-45-90</b>
+								p <b>Банк:</b> Филиал Точка Публичного акционерного общества Банка «Финансовая Корпорация Открытие»
+								p <b>Расчётный счёт:</b> 40702810303500000989
+								p <b>Корреспондентский счёт:</b> 30101810845250000999
+								p <b>БИК:</b> 044525999 в ГУ банка России по ЦФО
+								p <b>Пункты выдачи продукции:</b>
+								p СК "Динамит" <br>г. Санкт-Петебург, ул. Челиева, д.13, 5 этаж, стойка в центральном зале.

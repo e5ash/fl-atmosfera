@@ -535,6 +535,10 @@ img, svg, path, circle, rect, line {
   background-color: #3F3F3F;
 }
 
+body {
+  background: #E5E5E5;
+}
+
 .wrap {
   overflow-x: hidden;
 }
@@ -975,7 +979,8 @@ img, svg, path, circle, rect, line {
   margin-right: 0;
 }
 .calendar__day:hover var {
-  color: #EB7001;
+  color: #fff;
+  background: rgba(12, 118, 176, 0.6);
 }
 .calendar__day var {
   display: flex;
@@ -1109,15 +1114,14 @@ img, svg, path, circle, rect, line {
 }
 
 .anonces {
-  padding-top: 35px;
-  padding-bottom: 135px;
+  padding-top: 45px;
+  padding-bottom: 55px;
   margin-top: 50px;
   background: rgba(12, 118, 176, 0.04);
-  background: url("../imgs/anonces-bg.png") no-repeat center;
-  background-size: 1920px 100%;
+  background: #A7C9DC;
 }
 .anonces__title {
-  margin-bottom: 105px;
+  margin-bottom: 80px;
 }
 .anonces__inner {
   position: relative;
@@ -1187,7 +1191,8 @@ img, svg, path, circle, rect, line {
 .making {
   z-index: 2;
   position: relative;
-  padding-bottom: 60px;
+  padding-top: 45px;
+  padding-bottom: 50px;
 }
 .making__title {
   margin-bottom: 50px;
@@ -1298,12 +1303,11 @@ img, svg, path, circle, rect, line {
 }
 
 .a {
-  z-index: 1;
+  z-index: 2;
   position: relative;
   padding-top: 47px;
-  padding-bottom: 110px;
-  background: url("../imgs/anonces-bg.png") no-repeat center;
-  background-size: 1920px 100%;
+  padding-bottom: 50px;
+  background: #A7C9DC;
 }
 .a__icon-cup {
   z-index: -1;
@@ -1348,9 +1352,10 @@ img, svg, path, circle, rect, line {
 }
 
 .hist {
+  z-index: 1;
   position: relative;
-  padding-top: 20px;
-  padding-bottom: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 .hist__icon-bg {
   top: -280px;
@@ -1372,6 +1377,9 @@ img, svg, path, circle, rect, line {
 }
 .hist__item:hover .hist__name {
   bottom: 17px;
+}
+.hist__item:hover .hist__name span {
+  border-color: #fff;
 }
 .hist__img {
   position: relative;
@@ -1419,6 +1427,10 @@ img, svg, path, circle, rect, line {
   color: #fff;
   transition: 0.3s;
 }
+.hist__name span {
+  transition: 0.3s;
+  border-bottom: 1px solid transparent;
+}
 .hist__name.--pl {
   padding-left: 70px;
   text-align: left;
@@ -1440,25 +1452,26 @@ img, svg, path, circle, rect, line {
   background-color: #DF4A65;
 }
 
-.catalog {
+.suv {
+  z-index: 2;
+  position: relative;
   padding-top: 67px;
-  padding-bottom: 190px;
-  background: url("../imgs/anonces-bg.png") no-repeat center;
-  background-size: 1920px 100%;
+  padding-bottom: 100px;
+  background: #A7C9DC;
 }
-.catalog__micro {
+.suv__micro {
   z-index: -1;
   position: absolute;
   top: -360px;
   right: 20px;
 }
-.catalog__title {
+.suv__title {
   margin-bottom: 63px;
 }
-.catalog__list {
+.suv__list {
   margin: 0 -10px -20px;
 }
-.catalog__item {
+.suv__item {
   position: relative;
   height: 260px;
   overflow: hidden;
@@ -1466,16 +1479,19 @@ img, svg, path, circle, rect, line {
   width: calc(100% / 2 - 20px);
   margin: 0 10px 20px;
 }
-.catalog__item:hover .catalog__name {
+.suv__item:hover .suv__name {
   bottom: 19px;
 }
-.catalog__img {
+.suv__item:hover .suv__name span {
+  border-color: #fff;
+}
+.suv__img {
   position: absolute;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
 }
-.catalog__name {
+.suv__name {
   position: absolute;
   left: 0;
   right: 0;
@@ -1488,20 +1504,42 @@ img, svg, path, circle, rect, line {
   text-align: center;
   transition: 0.3s;
 }
-.catalog__icon {
+.suv__name span {
+  transition: 0.3s;
+  border-bottom: 1px solid transparent;
+}
+.suv__icon {
   position: absolute;
   top: 0;
   right: 0;
 }
-.catalog__icon.--bottom {
+.suv__icon.--bottom {
   top: auto;
   bottom: -1px;
+}
+
+.sitemap {
+  padding-bottom: 50px;
+}
+.sitemap__title {
+  margin-bottom: 30px;
+}
+.sitemap__list ul {
+  flex-direction: column;
+}
+.sitemap__list li {
+  margin-bottom: 10px;
+}
+.sitemap__list a {
+  border-color: #3F3F3F;
+}
+.sitemap__list a:hover {
+  border-color: transparent;
 }
 
 .footer {
   color: #fff;
   background: #0C76B0;
-  margin-top: -90px;
   padding-top: 26px;
   padding-bottom: 17px;
 }

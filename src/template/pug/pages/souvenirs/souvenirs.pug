@@ -1,0 +1,30 @@
+extends ../../templates/default
+block vars
+	-
+		title = "Сувениры"
+		breadcrumbs = [
+			['Предзаказ', 'preorder.html'],
+			[title]
+		]
+block content
+	include ../../../blocks/intro/intro
+	include ../../../blocks/sports/sports
+	.page
+		.case
+			+breadcrumbs
+			.page__wrap.row
+				.page__aside
+					include ../../../blocks/navus/navus
+				.page__section
+					.page__head
+						.page__icon
+							img(src="uploads/" alt="")
+						.page__title.h3= title
+					.page__body
+						.page__product.product
+							.product__wrap.row
+								.product__img
+									img(src="uploads/" alt="")
+								.product__inner
+									.product__settings
+										+psetting

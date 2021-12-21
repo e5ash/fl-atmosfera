@@ -15,6 +15,8 @@
 
 @import typography
 
+body
+	background: #E5E5E5
 
 .wrap
 	overflow-x: hidden
@@ -372,7 +374,7 @@
 		position: relative
 		padding-left: 58px
 		padding-right: 58px
-	&__inner
+	// &__inner
 		
 	&__arrow
 		position: absolute
@@ -402,7 +404,9 @@
 		&:hover
 			// opacity: 0.7
 			var
-				color: $orange
+				// color: $orange
+				color: #fff
+				background: rgba(12, 118, 176, 0.6)
 		var
 			display: flex
 			align-items: center
@@ -521,14 +525,18 @@
 
 
 .anonces
-	padding-top: 35px
-	padding-bottom: 135px
+	// padding-top: 35px
+	padding-top: 45px
+	padding-bottom: 55px
+	// padding-bottom: 135px
 	margin-top: 50px
 	background: rgba(12, 118, 176, 0.04)
-	background: url('../imgs/anonces-bg.png') no-repeat center
-	background-size: 1920px 100%
+	background: #A7C9DC
+	// background: url('../imgs/anonces-bg.png') no-repeat center
+	// background-size: 1920px 100%
 	&__title
-		margin-bottom: 105px
+		// margin-bottom: 105px
+		margin-bottom: 80px
 	&__inner
 		position: relative
 	&__wrap
@@ -587,7 +595,9 @@
 .making
 	z-index: 2
 	position: relative
-	padding-bottom: 60px
+	padding-top: 45px
+	padding-bottom: 50px
+	// padding-bottom: 60px
 	&__title
 		margin-bottom: 50px
 	&__wrap
@@ -683,12 +693,14 @@
 
 
 .a
-	z-index: 1
+	z-index: 2
 	position: relative
 	padding-top: 47px
-	padding-bottom: 110px
-	background: url('../imgs/anonces-bg.png') no-repeat center
-	background-size: 1920px 100%
+	padding-bottom: 50px
+	// padding-bottom: 110px
+	background: #A7C9DC
+	// background: url('../imgs/anonces-bg.png') no-repeat center
+	// background-size: 1920px 100%
 	&__icon-cup
 		z-index: -1
 		position: absolute
@@ -733,9 +745,12 @@
 		
 
 .hist
+	z-index: 1
 	position: relative
-	padding-top: 20px
-	padding-bottom: 30px
+	// padding-top: 20px
+	padding-top: 50px
+	padding-bottom: 50px
+	// padding-bottom: 30px
 	&__icon-bg
 		top: -280px
 		right: -260px
@@ -754,9 +769,12 @@
 			.hist
 				&__name
 					bottom: 17px
+					span
+						border-color: #fff
 	&__img
 		position: relative
 		&:before
+			// display: none
 			content: ''
 			position: absolute
 			opacity: 0.1
@@ -794,6 +812,9 @@
 		position: absolute
 		color: #fff
 		transition: .3s
+		span
+			transition: .3s
+			border-bottom: 1px solid transparent
 		&.--pl
 			padding-left: 70px
 			text-align: left
@@ -810,11 +831,15 @@
 .bg-pink
 	background-color: #DF4A65
 
-.catalog
+.suv
+	z-index: 2
+	position: relative
 	padding-top: 67px
-	padding-bottom: 190px
-	background: url('../imgs/anonces-bg.png') no-repeat center
-	background-size: 1920px 100%
+	padding-bottom: 100px
+	// padding-bottom: 190px
+	background: #A7C9DC
+	// background: url('../imgs/anonces-bg.png') no-repeat center
+	// background-size: 1920px 100%
 	&__micro
 		z-index: -1
 		position: absolute
@@ -832,9 +857,11 @@
 		width: calc(100% / 2 - 20px)
 		margin: 0 10px 20px
 		&:hover
-			.catalog
+			.suv
 				&__name
 					bottom: 19px
+					span
+						border-color: #fff
 					
 	&__img
 		position: absolute
@@ -853,6 +880,9 @@
 		text-transform: uppercase
 		text-align: center
 		transition: .3s
+		span
+			transition: .3s
+			border-bottom: 1px solid transparent
 	&__icon
 		position: absolute
 		top: 0
@@ -862,10 +892,36 @@
 			bottom: -1px
 
 
+.sitemap
+	padding-bottom: 50px
+	&__title
+		margin-bottom: 30px
+	&__list
+		ul
+			flex-direction: column
+		li
+			margin-bottom: 10px
+			// &:last-of-type
+		a
+			border-color: $black
+			&:hover
+				border-color: transparent
+
+
+
+
+
+
+
+
+
+
+
+
 .footer
 	color: #fff
 	background: #0C76B0
-	margin-top: -90px
+	// margin-top: -90px
 	padding-top: 26px
 	padding-bottom: 17px
 	a

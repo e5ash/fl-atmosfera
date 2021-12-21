@@ -1,0 +1,30 @@
+extends ../../templates/default
+block vars
+	-
+		title = "XIX Международный конкурс-фестиваль детского юношеского и взрослого творчества "СЕВЕРНАЯ ВЕНЕЦИЯ 2021". г. Санк-Петербург. Пулковская PARK INN, Площадь Победы 1 10.05.2021"
+		breadcrumbs = [
+			['Видеотека', 'videoteka.html'],
+			['Детское творчество', 'videoteka-section.html'],
+			[title]
+		]
+block content
+	include ../../../blocks/intro/intro
+	include ../../../blocks/sports/sports
+	.page
+		.case
+			+breadcrumbs
+			.page__wrap.row
+				.page__aside
+					include ../../../blocks/navus/navus
+				.page__section
+					.page__head
+						.page__icon
+							img(src="uploads/" alt="")
+						.page__title.h3= title
+					.page__body
+						.vids
+							.vids__list.row
+								a.vids__item(href="" data-fancybox="")
+									.vids__img.img
+										img(src="" alt="")
+									.vids__controls
