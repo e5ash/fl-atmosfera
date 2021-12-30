@@ -18,29 +18,29 @@ block content
 				.page__section
 					.page__head
 						.page__icon
-							img(src="uploads/" alt="")
+							img(src="uploads/cart-black.png" alt="")
 						.page__title.h3= title
 					.page__body
-						.order.row
+						.order
 							.order__wrap
 								.order__list
 									.order__item
-										.order__item-head.row
+										.order__item-head
 											.order__item-count 1
 											.order__item-title Укажите данные покупателя
 										.order__item-body
 											.order__fields.row
-												.order__field.field.--sm.--b-gray.--email
+												.order__field.field.--smm.--b-gray.--email.--p20.--fz18
 													.field__wrap
 														input.field__area(type="text" placeholder="Email*")
-												.order__field.field.--sm.--b-gray.--phone
+												.order__field.field.--smm.--b-gray.--phone.--p20.--fz18
 													.field__wrap
 														input.field__area(type="tel" placeholder="Телефон*")
-												.order__field.field.--sm.--b-gray.--name
+												.order__field.field.--smm.--b-gray.--name.--p20.--fz18
 													.field__wrap
 														input.field__area(type="text" placeholder="ФИО*")
 									.order__item
-										.order__item-head.row
+										.order__item-head
 											.order__item-count 2
 											.order__item-title Выбирите способ доставки
 										.order__item-body
@@ -50,18 +50,18 @@ block content
 													.radio__box
 													.radio__wrap Отправка файла на Email
 												.radios__radio.check.radio
-													input.check__input(type="radio" name="delivery" value="Самовывоз (цифра будет отправлена на email)")
+													input.check__input(type="radio" name="delivery" value="Самовывоз (цифра будет отправлена на email)" checked="checked")
 													.radio__box
 													.radio__wrap Самовывоз (цифра будет отправлена на email)
 
 									.order__item
-										.order__item-head.row
+										.order__item-head
 											.order__item-count 3
 											.order__item-title Выбирите способ оплаты
 										.order__item-body
 											.order__radios.radios
 												.radios__radio.check.radio
-													input.check__input(type="radio" name="pay" value="Оплата через Яндекс")
+													input.check__input(type="radio" name="pay" value="Оплата через Яндекс" checked="checked")
 													.radio__box
 													.radio__wrap Оплата через Яндекс
 												.radios__radio.check.radio
@@ -74,16 +74,16 @@ block content
 													.radio__wrap Наличными в кассах и терминалах партнеров
 								.order__final
 									.order__promo.promocode
-										.promocode__field.field.--sm.--b-gray
+										.promocode__field.field.--smm.--b-gray.--p20.--fz18
 											.field__wrap
 												input.field__area(type="text" placeholder="Промо-код")
-										button.promocode__btn.btn.--sm.--bg-gray Применить
-									.order__comment.field.--md.--b-gray
+										button.promocode__btn.btn.--smm.--bg-gray Применить
+									.order__comment.field.--md.--b-gray.--p20.--fz18
 										.field__wrap
 											textarea.field__area(name="" placeholder="Примечание к заказу")
 									.order__total
 										.order__total-title Итого
-										.order__total-value 350 ₽
+										.order__total-value 350 #[b ₽]
 									.order__foot
 										.order__alert Поле обязательно к заполнению
 										button.order__btn-submit.btn.--md.--bg-orange Оформить заказ
@@ -96,18 +96,18 @@ block content
 								.ocart__list
 									.ocart__item
 										.ocart__img.img
-											img(src="" alt="")
+											img(src="uploads/ph-1.jpg" alt="")
 										.ocart__name Фото цифровое
 										.ocart__incdec.incdec
 											button.incdec__btn.btn.--minus
-											.incdec__field.field
+											.incdec__field.field.--num
 												.field__wrap
 													input.field__area(type="tel" value="1")
 											button.incdec__btn.btn.--plus
-										.ocart__price 100 ₽
+										.ocart__price 100 #[b ₽]
 									.ocart__item
 										.ocart__img.img
-											img(src="" alt="")
+											img(src="uploads/ph-2.jpg" alt="")
 										.ocart__name Брелок
 										.ocart__incdec.incdec
 											button.incdec__btn.btn.--minus
@@ -115,8 +115,8 @@ block content
 												.field__wrap
 													input.field__area(type="tel" value="1")
 											button.incdec__btn.btn.--plus
-										.ocart__price 250 ₽
+										.ocart__price 250 #[b ₽]
 								.ocart__total
 									.ocart__total-title Итого
-									.ocart__total-value 350 ₽
+									.ocart__total-value 350 #[b ₽]
 								button.ocart__btn-next.btn.--md.--bg-orange Продолжить покупки

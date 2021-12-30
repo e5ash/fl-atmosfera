@@ -18,15 +18,15 @@ block content
 				.page__section
 					.page__head
 						.page__icon
-							img(src="uploads/" alt="")
+							img(src="uploads/cart-black.png" alt="")
 						.page__title.h3= title
 					.page__body
 						.page__product.product
 							.product__text
 								p Тарелка - сувенир из различных материалов, выполненный в художественном стиле.
 							.product__wrap.row
-								- img = '.jpg'
-								+imgs(img)
+								- imgs = ['https://www.a-online.ru/assets/images/products/115/tarel.jpg', 'https://www.a-online.ru/assets/images/products/115/tarel-1.jpg']
+								+imgs(imgs)
 								
 								.product__inner
 									.product__settings
@@ -35,16 +35,16 @@ block content
 												.psetting__item
 													.psetting__title Цена
 													.psetting__wrap
-														.psetting__field.field.--sm.--b-gray
+														.psetting__field.field.--sm.--b-gray.--p15
 															.field__wrap
 																input.field__area(type="tel" name="" value="0" readonly="readonly")
 													.psetting__desc рублей
 												.psetting__item
 													.psetting__title Количество
 													.psetting__wrap
-														.psetting__field.field.--sm.--b-gray.--indec
+														.psetting__field.field.--sm.--b-gray.--p15.--num
 															.field__wrap
-																input.field__area(type="tel" name="" value="1")
+																input.field__area(type="number" name="" value="1" min="1" max="999")
 													.psetting__desc шт.
 												.psetting__item
 													.psetting__title Тип
@@ -64,9 +64,10 @@ block content
 												.psetting__item
 													.psetting__title
 													.psetting__wrap
-														button.psetting__btn.btn.--md.--b-orange.btn-choise-photo Выбрать фотографии для товара
+														button.psetting__btn.btn.--md.--b-orange.btn-choise-photo.--fz18 Выбрать фотографии для товара
+													.psetting__desc
 												.psetting__item
 													.psetting__title
 													.psetting__wrap
-														button.psetting__btn.btn.--md.--bg-orange Добавить в корзину
+														button.psetting__btn.btn.--md.--bg-orange.--fz18 Добавить в корзину
 													.psetting__desc

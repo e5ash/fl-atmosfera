@@ -6,7 +6,7 @@ block vars
 			['Фотосток', 'fotoskok.html'],
 			['Футбол', 'fotoskok-section.html'],
 			['Турнир по футболу "Baltic Cup 2021" среди команд 2013 г.р. (U8). Арена ЦФП "Восхождение" 02.10.2021', 'event-photos.html'],
-			[title]
+			['Командные фото']
 		]
 block content
 	include ../../../blocks/intro/intro
@@ -19,8 +19,8 @@ block content
 					include ../../../blocks/navus/navus
 				.page__section
 					.page__head
-						.page__icon
-							img(src="uploads/" alt="")
+						.page__icon.--gray.--no-border
+							img(src="uploads/sports/sport-football.png" alt="")
 						.page__title.h3= title
 					.page__body
 						.photos
@@ -28,20 +28,9 @@ block content
 							.photos__list.row
 								mixin photosItem()
 									.photos__item
-										.photos__img.img
-											img(src="uploads/" alt="")
-										.photos__controls.ctrls
-											.ctrls__btns
-												.ctrls__btn
-												.ctrls__btn
-												.ctrls__btn
-											.ctrls__likes
-												.ctrls__like
-													.ctrls__like-value 10
-													.ctrls__like-icon
-												.ctrls__like
-													.ctrls__like-value 3
-													.ctrls__like-icon
+										.photos__img.img(data-src="uploads/ph-1.jpg" data-fancybox="" data-group="photos" data-caption="Описание фото")
+											img(src="uploads/ph-1.jpg" alt="")
+										+ctrls('photos__controls')
 								+photosItem()
 								+photosItem()
 								+photosItem()

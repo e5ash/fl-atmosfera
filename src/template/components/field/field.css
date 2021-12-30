@@ -5,23 +5,18 @@
 .field__wrap {
   position: relative;
 }
-.field__placeholder {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  color: #B2B2B2;
-  transition: 0.3s;
-  transform: translateY(-50%);
-}
 .field__area {
   display: block;
   font-size: 18px;
   font-family: "HelveticaNeueCyr", sans-serif;
   width: 100%;
+  resize: none;
 }
 .field__area::placeholder {
-  color: #B2B2B2;
+  color: #8E8E8E;
+}
+.field__area[readonly] {
+  cursor: default;
 }
 .field.--bg-gray .field__area {
   background-color: #F1F1F1;
@@ -29,22 +24,34 @@
 .field.--b-gray .field__area {
   border: 1px solid #B2B2B2;
 }
-.field.--sm .field__placeholder, .field.--sm .field__area {
+.field.--sm .field__area {
   font-weight: 400;
   font-size: 14px;
 }
 .field.--sm .field__area {
   height: 30px;
-  border-radius: 10px;
 }
-.field.--smm .field__placeholder, .field.--smm .field__area {
+.field.--smm .field__area {
   font-weight: 400;
   font-size: 14px;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 .field.--smm .field__area {
   height: 40px;
+}
+.field.--p15 .field__area {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.field.--p20 .field__area {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.field.--radius .field__area {
+  border-radius: 10px;
+}
+.field.--fz18 .field__area {
+  font-size: 18px;
+  line-height: 1.2;
 }
 .field.--filled .field__placeholder, .field.--focus .field__placeholder {
   opacity: 0;

@@ -18,13 +18,13 @@ block content
 				.page__section
 					.page__head
 						.page__icon
-							img(src="uploads/" alt="")
+							img(src="uploads/user-black.svg" alt="")
 						.page__title.h3= title
 					.page__body
-						.page__hist.hist
-							.hist__filter
-								.hist__title История заказов
-								.hist__select.select.--sm.--bg-gray(data-placeholder="Выберите статус ")
+						.page__hist.history
+							.history__filter
+								.history__title История заказов
+								.history__select.select.--sm.--bg-white.--b-gray.--p20(data-placeholder="Выберите статус ")
 									.select__wrap
 										.select__area
 											.select__title
@@ -35,13 +35,13 @@ block content
 											option(value="Статус 1") Статус 1
 											option(value="Статус 2") Статус 2
 											option(value="Статус 3") Статус 3
-								.hist__search.search
-									.search__field.field.--sm.--bg-gray
+								.history__search.search
+									.search__field.field.--sm.--bg-gray.--p20
 										.field__wrap
 											input.field__area(type="text" placeholder="Поиск...")
 									.search__btn.btn
 										<svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.9073 6.12119C10.9073 9.11026 8.60453 11.4706 5.83954 11.4706C3.07455 11.4706 0.771784 9.11026 0.771784 6.12119C0.771784 3.13213 3.07455 0.771784 5.83954 0.771784C8.60453 0.771784 10.9073 3.13213 10.9073 6.12119Z" stroke="#C0C0C0" stroke-width="1.54357"/><rect width="6.11764" height="1.86908" rx="0.93454" transform="matrix(0.699733 0.714405 -0.680691 0.732571 9.71875 9.26025)" fill="#B2B2B2"/></svg>
-							table.hist__table
+							table.history__table
 								thead
 									tr
 										th Номер

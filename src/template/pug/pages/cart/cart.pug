@@ -18,9 +18,9 @@ block content
 				.page__section
 					.page__head
 						.page__icon
-							img(src="uploads/" alt="")
+							img(src="uploads/cart-black.png" alt="")
 						.page__title.h3= title
-						.page__btn.btn.--md.--b-orange Продолжить покупки
+						.page__btn.btn.--md.--b-orange.--fz18 Продолжить покупки
 					.page__body
 						.cart
 							.cart__list
@@ -36,36 +36,48 @@ block content
 										tr
 											td
 												.cart-pic
-													img(src="" alt="")
+													img(src="uploads/ph-1.jpg" alt="")
 											td
 												.cart-data
 													.cart-name Фото цифровое
 											td
 												.cart-incdec.incdec
+													button.incdec__btn.btn.--minus
+													.incdec__field.field.--num
+														.field__wrap
+															input.field__area(type="tel" value="1")
+													button.incdec__btn.btn.--plus
 											td
 												.cart-price 100 ₽
 											td
 												.cart-price-total 100 ₽
 												.cart-remove
+													<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 1L1 9" stroke="#3F3F3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 1L9 9" stroke="#3F3F3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
 										tr
 											td
 												.cart-pic
-													img(src="" alt="")
+													img(src="uploads/ph-2.jpg" alt="")
 											td
 												.cart-data
 													.cart-name Брелок
 													.cart-desc
 														p Форма - Футболка (35х50 мм.)
 														p Бумага - Матовая
-														p Примечание - фото: 3376795
+														p Примечание - <br>фото: 3376795
 											td
 												.cart-incdec.incdec
+													button.incdec__btn.btn.--minus
+													.incdec__field.field.--num
+														.field__wrap
+															input.field__area(type="tel" value="1")
+													button.incdec__btn.btn.--plus
 											td
 												.cart-price 250 ₽
 											td
 												.cart-price-total 250 ₽
 												.cart-remove
+													<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 1L1 9" stroke="#3F3F3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 1L9 9" stroke="#3F3F3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
 								.cart__total
 									.cart__total-title Итого
-									.cart__total-value 350 ₽
+									.cart__total-value 350 #[b ₽]
 								.cart__btn-next.btn.--md.--bg-orange Перейти к оформлению заказа

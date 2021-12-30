@@ -1,7 +1,7 @@
 extends ../../templates/default
 block vars
 	-
-		title = "XIX Международный конкурс-фестиваль детского юношеского и взрослого творчества "СЕВЕРНАЯ ВЕНЕЦИЯ 2021". г. Санк-Петербург. Пулковская PARK INN, Площадь Победы 1 10.05.2021"
+		title = 'XIX Международный конкурс-фестиваль детского юношеского и взрослого творчества "СЕВЕРНАЯ ВЕНЕЦИЯ 2021". г. Санк-Петербург. Пулковская PARK INN, Площадь Победы 1 10.05.2021'
 		breadcrumbs = [
 			['Видеотека', 'videoteka.html'],
 			['Детское творчество', 'videoteka-section.html'],
@@ -18,13 +18,25 @@ block content
 					include ../../../blocks/navus/navus
 				.page__section
 					.page__head
-						.page__icon
-							img(src="uploads/" alt="")
+						.page__icon.--gray.--no-border
+							img(src="uploads/sports/sport-kid-creation.png" alt="")
 						.page__title.h3= title
 					.page__body
+						.shooting
+							.shooting__img.img
+								img(src="uploads/operator.png" alt="")
+							.shooting__text
+								p Съемку производил Иванов Сергей Иванович
+								p Пожалуйста оцените его работу и оставьте свой комментарий
+							a.shooting__btn-comment.btn.--md.--bg-orange.--fz24(href="") Оставить комментарий
 						.vids
 							.vids__list.row
-								a.vids__item(href="" data-fancybox="")
-									.vids__img.img
-										img(src="" alt="")
-									.vids__controls
+								mixin vidsItem
+									.vids__item
+										a.vids__img.img(href="https://www.youtube.com/watch?v=kJQP7kiw5Fk" data-fancybox="")
+											img(src="uploads/ph-4.jpg" alt="")
+										+ctrls('vids__controls')(puzzlesHidden=true)
+								+vidsItem
+								+vidsItem
+								+vidsItem
+								+vidsItem

@@ -1,7 +1,7 @@
 extends ../../templates/default
 block vars
 	-
-		title = ""
+		title = "Личный кабинет"
 		breadcrumbs = [
 			['', '.html'],
 			[title]
@@ -11,13 +11,85 @@ block content
 	include ../../../blocks/sports/sports
 	.page
 		.case
-			+breadcrumbs
+			// +breadcrumbs
 			.page__wrap.row
 				.page__aside
 					include ../../../blocks/navus/navus
 				.page__section
 					.page__head
 						.page__icon
-							img(src="uploads/" alt="")
+							img(src="uploads/user-black.svg" alt="")
 						.page__title.h3= title
 					.page__body
+						mixin opSort
+							.op__sort.sort
+								.sort__title Сортировка
+								.sort__list
+									.sort__item.--w385
+										.sort__name По виду спорта
+										.sort__select.select.--sm.--bg-gray.--p20
+											.select__wrap
+												.select__area
+													.select__title
+													.select__icon
+														<svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.01733L5 5.23066L9 1.01733" stroke="#3F3F3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+												.select__drop
+												select.select__parse
+													option(value="Все") Все
+													option(value="Гандбол") Гандбол
+													option(value="Футбол" selected="selected") Футбол
+													option(value="Флорбол") Флорбол
+													option(value="Водные виды спорта") Водные виды спорта
+													option(value="Фигурное катание") Фигурное катание
+													option(value="Пляжный волейбол") Пляжный волейбол
+													option(value="Танцы") Танцы
+													option(value="Фехтование") Фехтование
+													option(value="Большой тенис") Большой тенис
+													option(value="Хокей") Хокей
+													option(value="Футзал") Футзал
+													option(value="Гимнастика") Гимнастика
+													option(value="Баскетбол") Баскетбол
+													option(value="Боевые единоборства") Боевые единоборства
+													option(value="Бадминтон") Бадминтон
+													option(value="Спорт для семьи") Спорт для семьи
+													option(value="Детское творчество") Детское творчество
+									.sort__item.--w-auto
+										.sort__name По мероприятию
+										.sort__select.select.--sm.--bg-gray.--p20
+											.select__wrap
+												.select__area
+													.select__title
+													.select__icon
+														<svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.01733L5 5.23066L9 1.01733" stroke="#3F3F3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+												.select__drop
+												select.select__parse
+													option(value="Турнир по футболу SPARTA CUP 2021") Турнир по футболу "SPARTA CUP 2021"
+													option(value="Турнир по футболу SPARTA CUP 2021") Турнир по футболу "SPARTA CUP 2021"
+													option(value="Турнир по футболу SPARTA CUP 2021") Турнир по футболу "SPARTA CUP 2021"
+													option(value="Турнир по футболу SPARTA CUP 2021") Турнир по футболу "SPARTA CUP 2021"
+						.op
+							+opUser
+							.op__sealed.ops
+								.ops__title Проданные фото
+								.ops__list
+									.ops__item
+										.ops__desc Турнир по футболу "SPARTA CUP 2021" среди команд 2013 г.р. (U8). Арена "Метрополис"
+										.ops__phs.row
+											mixin ph
+												.ops__ph
+													.ops__img.img(data-fancybox="" data-src="uploads/ph-1.jpg" data-group="images" data-caption="Описание")
+														img(src="uploads/ph-1.jpg" alt="")
+													.ops__data.row
+														.ops__count Продано 5 шт.
+														.ops__controls.ctrls__likes
+															.ctrls__like.--up
+																.ctrls__like-value 10
+																.ctrls__like-icon
+																	img(src="uploads/thumbs-up-orange.svg" alt="")
+															.ctrls__like.--down
+																.ctrls__like-value 3
+																.ctrls__like-icon
+																	img(src="uploads/thumbs-down-orange.svg" alt="")
+											+ph
+											+ph
+											+ph

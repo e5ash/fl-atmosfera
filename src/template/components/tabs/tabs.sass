@@ -1,0 +1,23 @@
+@import ../../sass/vars
+
+.tabs
+	&-links
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+	&-item
+		opacity: 0
+		height: 0
+		overflow: hidden
+		visibility: hidden
+		transition: opacity 2s, visibility 2s
+		&.--current
+			opacity: 1
+			height: auto
+			overflow: visible
+			visibility: visible
+
+// @media screen and (max-width: 767px)
+// 	.tabs
+// 		&-item
+// 			transition: opacity .3s, visibility .3s

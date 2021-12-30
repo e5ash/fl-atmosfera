@@ -1,0 +1,25 @@
+@import ../../sass/vars
+
+.radio
+	display: flex
+	&__box
+		width: 12px
+		height: 12px
+		border-radius: 50%
+		border: 2px solid $orange
+		transition: .3s
+	&__wrap
+		width: calc(100% - 12px)
+		padding-left: 32px
+		font-weight: 400
+	&.--disabled
+		pointer-events: none
+		.radio
+			&__box
+				border-color: #838383
+			&__wrap
+				color: #838383
+	&.--checked
+		.radio
+			&__box
+				background-color: $orange

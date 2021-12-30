@@ -16,6 +16,7 @@
 	transition: .3s
 	outline: none
 	border-bottom: none
+	font-weight: 500
 	&.--sm
 		height: 30px
 		border-radius: 10px
@@ -42,6 +43,19 @@
 		&:hover
 			color: #fff
 			background-color: $bluel
+	&.--b-red
+		border: 1px solid #FF0303
+	&.--bg-white
+		background-color: #fff
+		&:hover
+			color: #fff
+			border-color: $bluel
+			background-color: $bluel
+	&.--b-gray
+		border: 1px solid #838383
+		&:hover
+			color: #fff
+			background-color: #838383
 	&.--b-orange
 		font-size: 14px
 		border: 2px solid $orange
@@ -58,3 +72,10 @@
 			// 	// 	fill: #fff
 			// 	&[stroke]
 			// 		stroke: #fff
+	&.--bg-gray
+		color: #fff
+		background: #838383
+	&.--fz18
+		font-size: 18px
+	&.--fz24
+		font-size: 24px

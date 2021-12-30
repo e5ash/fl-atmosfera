@@ -39,23 +39,45 @@
 	&__parse
 		display: none
 
-	&.--sm
+	&.--smm
 		font-weight: 400
 		.select
 			&__area
-				height: 30px
-				padding-left: 20px
-				padding-right: 20px
-				border-radius: 10px
+				height: 40px
 			&__title
 				font-size: 14px
 				color: #3F3F3F
 			&__drop
 				max-height: 200px
-				border-radius: 0 0 10px 10px
 			&__item
 				font-size: 14px
 				padding: 5px 20px
+		&.--radius
+			.select
+				&__area
+					border-radius: 10px
+				&__drop
+					border-radius: 0 0 10px 10px
+
+	&.--sm
+		font-weight: 400
+		.select
+			&__area
+				height: 30px
+			&__title
+				font-size: 14px
+				color: #3F3F3F
+			&__drop
+				max-height: 200px
+			&__item
+				font-size: 14px
+				padding: 5px 20px
+		&.--radius
+			.select
+				&__area
+					border-radius: 10px
+				&__drop
+					border-radius: 0 0 10px 10px
 
 	&.--bg-gray
 		.select
@@ -68,12 +90,45 @@
 					background-color: darken(#F1F1F1, 2%)
 				&.--selected
 					background-color: darken(#F1F1F1, 5%)
-					
-	&.--open
-		z-index: 5
+
+	&.--b-gray
 		.select
 			&__area
-				border-radius: $radius $radius 0 0
+				border: 1px solid #B2B2B2
+				background-color: #fff
+			&__drop
+				border: 1px solid #B2B2B2
+				background-color: #fff
+			&__item
+				&:hover
+					background-color: darken(#B2B2B2, 2%)
+				&.--selected
+					background-color: darken(#B2B2B2, 5%)
+	
+	&.--p15
+		.select
+			&__area
+				padding-left: 15px
+				padding-right: 10px
+	&.--p20
+		.select
+			&__area
+				padding-left: 20px
+				padding-right: 10px
+	&.--fz16
+		.select
+			&__title
+				font-size: 16px
+	&.--fz18
+		.select
+			&__title
+				font-size: 18px
+	&.--open
+		z-index: 30
+		.select
+			&__area
+				border-bottom-left-radius: 0 !important
+				border-bottom-right-radius: 0 !important
 			&__icon
 				svg
 					transform: rotate(180deg)

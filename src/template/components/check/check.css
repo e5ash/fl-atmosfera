@@ -27,6 +27,20 @@
   font-size: 14px;
   line-height: 20px;
 }
+.checkbox.--b-gray .checkbox__box {
+  padding: 1px;
+  border-color: #838383;
+}
+.checkbox.--xs .checkbox__box {
+  width: 15px;
+  height: 15px;
+}
+.checkbox.--xs .checkbox__wrap {
+  width: calc(100% - 15px);
+  padding-left: 10px;
+  font-size: 18px;
+  font-weight: 400;
+}
 .checkbox.--checked .checkbox__box svg {
   opacity: 1;
   transform: scale(1);

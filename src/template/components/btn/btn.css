@@ -14,6 +14,7 @@
   transition: 0.3s;
   outline: none;
   border-bottom: none;
+  font-weight: 500;
 }
 .btn.--sm {
   height: 30px;
@@ -50,6 +51,24 @@
   color: #fff;
   background-color: #39ABD7;
 }
+.btn.--b-red {
+  border: 1px solid #FF0303;
+}
+.btn.--bg-white {
+  background-color: #fff;
+}
+.btn.--bg-white:hover {
+  color: #fff;
+  border-color: #39ABD7;
+  background-color: #39ABD7;
+}
+.btn.--b-gray {
+  border: 1px solid #838383;
+}
+.btn.--b-gray:hover {
+  color: #fff;
+  background-color: #838383;
+}
 .btn.--b-orange {
   font-size: 14px;
   border: 2px solid #EB7001;
@@ -62,4 +81,14 @@
 }
 .btn.--b-orange:hover {
   border-color: #39ABD7;
+}
+.btn.--bg-gray {
+  color: #fff;
+  background: #838383;
+}
+.btn.--fz18 {
+  font-size: 18px;
+}
+.btn.--fz24 {
+  font-size: 24px;
 }

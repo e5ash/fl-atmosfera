@@ -18,24 +18,24 @@ block content
 				.page__section
 					.page__head
 						.page__icon
-							img(src="uploads/" alt="")
+							img(src="uploads/cart-black.png" alt="")
 						.page__title.h3= title
 					.page__body
 						.page__catalog.catalog
-							.catalog__list
+							.catalog__list.row
 								mixin catalogItem(name, href, img)
 									a.catalog__item(href=href)
-										.catalog__name= name
+										.catalog__name #[span= name]
 										.catalog__img
-											img(src="uploads/" + img alt="")
-								+catalogItem('Коллаж (печать)', 'catalog-collage.html', '')
-								+catalogItem('Фото (печать)', 'catalog-photo-print.html', '')
-								+catalogItem('Магнит на холодильник', 'catalog-magnet.html', '')
-								+catalogItem('Диплом', 'catalog-diplom.html', '')
-								+catalogItem('Календирь на холодильник', 'catalog-calendar.html', '')
-								+catalogItem('Часы', 'catalog-clocks.html', '')
-								+catalogItem('Брелок', 'catalog-keychain.html', '')
-								+catalogItem('Тарелка', 'catalog-plate.html', '')
-								+catalogItem('Наклейка на автомобиль', 'catalog-sticker.html', '')
-								+catalogItem('Фото цифровое', 'catalog-photo.html', '')
-								+catalogItem('Видеозапись', 'catalog-video.html', '')
+											img(src=img alt="")
+								+catalogItem('Коллаж (печать)', 'catalog-collage.html', 'https://www.a-online.ru/assets/images/products/138/medium/kollag-piter.jpg')
+								+catalogItem('Фото (печать)', 'catalog-photo-print.html', 'https://www.a-online.ru/assets/images/products/104/medium/076a6953.jpg')
+								+catalogItem('Магнит на холодильник', 'catalog-magnet.html', 'https://www.a-online.ru/assets/images/products/106/medium/kar-foto-2.jpg')
+								+catalogItem('Диплом', 'catalog-diplom.html', 'https://www.a-online.ru/assets/images/products/109/medium/img-9267.jpg')
+								+catalogItem('Календирь на холодильник', 'catalog-calendar.html', 'https://www.a-online.ru/assets/images/products/110/medium/big-kalendar-1.jpg')
+								+catalogItem('Часы', 'catalog-clocks.html', 'https://www.a-online.ru/assets/images/products/112/medium/20170501-chasyi-kvadratnyie.jpg')
+								+catalogItem('Брелок', 'catalog-keychain.html', 'https://www.a-online.ru/assets/images/products/113/medium/brelok-krasnyij.jpg')
+								+catalogItem('Тарелка', 'catalog-plate.html', 'https://www.a-online.ru/assets/images/products/115/medium/tarel.jpg')
+								+catalogItem('Наклейка на автомобиль', 'catalog-sticker.html', 'https://www.a-online.ru/assets/images/products/114/medium/bodibilding.jpg')
+								+catalogItem('Фото цифровое', 'catalog-photo.html', 'uploads/photo-comp-1.jpg')
+								+catalogItem('Видеозапись', 'catalog-video.html', 'uploads/video-comp-1.jpg')

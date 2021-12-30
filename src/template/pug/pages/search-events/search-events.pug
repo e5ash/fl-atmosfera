@@ -1,7 +1,7 @@
 extends ../../templates/default
 block vars
 	-
-		title = ""
+		title = "Результаты поиска"
 		breadcrumbs = [
 			['', '.html'],
 			[title]
@@ -18,6 +18,23 @@ block content
 				.page__section
 					.page__head
 						.page__icon
-							img(src="uploads/" alt="")
+							img(src="uploads/magniffic-glass-black.svg" alt="")
 						.page__title.h3= title
 					.page__body
+						.esearch
+							.esearch__title Турнир по футболу
+							.esearch__list.row.section
+								.section__list.row
+									+sectionItem('Турнир по футболу "SPARTA CUP 2021" среди команд 2011-2012 г.р. (U9-U10). Арена "Метрополис"', 'uploads/sparta-cup.png', ['03.10.2021', '04.10.2021'], 'Организатор «SPARTA CUP»')
+									+sectionItem('Турнир по футболу "SPARTA CUP 2021" среди команд 2011-2012 г.р. (U9-U10). Арена "Метрополис"', 'uploads/sparta-cup.png', ['03.10.2021'], 'Организатор «SPARTA CUP»')
+									+sectionItem('Турнир по футболу "Vsevolozhsk Cup 2021" среди команд 2014 г.р. (U7). Утро. Арена "Grona Lund"', 'uploads/sparta-cup.png', ['03.10.2021'], 'Организатор «SPARTA CUP»')
+									+sectionItem('Турнир по футболу "Vsevolozhsk Cup 2021" среди команд 2014 г.р. (U7). Утро. Арена "Grona Lund"', 'uploads/sparta-cup.png', ['03.10.2021'], 'Организатор «SPARTA CUP»')
+									+sectionItem('Турнир по футболу "One Day Junior Cup 2021" среди команд 2013 г.р. (U8). Арена "ENERGY"', 'uploads/sparta-cup.png', ['03.10.2021'], 'Организатор «SPARTA CUP»')
+									+sectionItem('Первенство Ленинградской области по футзалу среди команд 2009-2010 г.р. (U11-U12). Арена "BARN HOUS...', 'uploads/sparta-cup.png', ['03.10.2021'], 'Организатор «SPARTA CUP»')
+									+sectionItem('Турнир по футболу "SPARTA CUP 2021" среди команд 2011-2012 г.р. (U9-U10). Арена "Метрополис"', 'uploads/sparta-cup.png', ['03.10.2021', '04.10.2021'], 'Организатор «SPARTA CUP»')
+									+sectionItem('Турнир по футболу "SPARTA CUP 2021" среди команд 2011-2012 г.р. (U9-U10). Арена "Метрополис"', 'uploads/sparta-cup.png', ['03.10.2021'], 'Организатор «SPARTA CUP»')
+									+sectionItem('Турнир по футболу "Vsevolozhsk Cup 2021" среди команд 2014 г.р. (U7). Утро. Арена "Grona Lund"', 'uploads/sparta-cup.png', ['03.10.2021'], 'Организатор «SPARTA CUP»')
+									+sectionItem('Турнир по футболу "Vsevolozhsk Cup 2021" среди команд 2014 г.р. (U7). Утро. Арена "Grona Lund"', 'uploads/sparta-cup.png', ['03.10.2021'], 'Организатор «SPARTA CUP»')
+									+sectionItem('Турнир по футболу "One Day Junior Cup 2021" среди команд 2013 г.р. (U8). Арена "ENERGY"', 'uploads/sparta-cup.png', ['03.10.2021'], 'Организатор «SPARTA CUP»')
+									+sectionItem('Первенство Ленинградской области по футзалу среди команд 2009-2010 г.р. (U11-U12). Арена "BARN HOUS...', 'uploads/sparta-cup.png', ['03.10.2021'], 'Организатор «SPARTA CUP»')
+								a.section__btn-more.btn.--smm.--b-orange.--fz18(href="") Показать еще

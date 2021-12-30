@@ -11,22 +11,23 @@ block content
 	include ../../../blocks/sports/sports
 	.page
 		.case
-			+breadcrumbs
+			// +breadcrumbs
 			.page__wrap.row
 				.page__aside
 					include ../../../blocks/navus/navus
 				.page__section
 					.page__head
-						.page__icon
-							img(src="uploads/" alt="")
+						.page__icon.--gray.--no-border
+							img(src="uploads/sports/sport-kid-creation.png" alt="")
 						.page__title.h3= title
 					.page__body
 						.sections
+							.sections__title Выберите раздел
 							.sections__list.row
 								mixin sectionsItem(name, img)
 									a.sections__item(href="")
-										.sections__name= name
+										.sections__name #[span=name]
 										.sections__img
 											img(src=img alt="")
-								+sectionsItem('Фото', '')
-								+sectionsItem('Видео', '')
+								+sectionsItem('Фото', 'uploads/photos.png')
+								+sectionsItem('Видео', 'uploads/videos.png')

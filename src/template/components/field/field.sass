@@ -6,21 +6,16 @@
 		margin-bottom: 17px
 	&__wrap
 		position: relative
-	&__placeholder
-		position: absolute
-		top: 50%
-		left: 0
-		right: 0
-		color: #B2B2B2
-		transition: .3s
-		transform: translateY(-50%)
 	&__area
 		display: block
 		font-size: $fzMain
 		font-family: $ffMain
 		width: 100%
+		resize: none
 		&::placeholder
-			color: #B2B2B2
+			color: #8E8E8E
+		&[readonly]
+			cursor: default
 	&.--bg-gray
 		.field
 			&__area
@@ -31,22 +26,38 @@
 				border: 1px solid #B2B2B2
 	&.--sm
 		.field
-			&__placeholder, &__area
+			&__area
 				font-weight: 400
 				font-size: 14px
 			&__area
 				height: 30px
-				border-radius: 10px
 	&.--smm
 		.field
-			&__placeholder, &__area
+			&__area
 				font-weight: 400
 				font-size: 14px
-				padding-left: 15px
-				padding-right: 15px
 			&__area
 				height: 40px
 				// border-radius: 10px
+	&.--p15
+		.field
+			&__area
+				padding-left: 15px
+				padding-right: 15px
+	&.--p20
+		.field
+			&__area
+				padding-left: 20px
+				padding-right: 20px
+	&.--radius
+		.field
+			&__area
+				border-radius: 10px
+	&.--fz18
+		.field
+			&__area
+				font-size: 18px
+				line-height: 1.2
 	&.--filled, &.--focus
 		.field
 			&__placeholder

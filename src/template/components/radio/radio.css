@@ -1,0 +1,27 @@
+.radio {
+  display: flex;
+}
+.radio__box {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #EB7001;
+  transition: 0.3s;
+}
+.radio__wrap {
+  width: calc(100% - 12px);
+  padding-left: 32px;
+  font-weight: 400;
+}
+.radio.--disabled {
+  pointer-events: none;
+}
+.radio.--disabled .radio__box {
+  border-color: #838383;
+}
+.radio.--disabled .radio__wrap {
+  color: #838383;
+}
+.radio.--checked .radio__box {
+  background-color: #EB7001;
+}

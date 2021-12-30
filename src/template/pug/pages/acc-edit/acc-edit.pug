@@ -18,125 +18,129 @@ block content
 				.page__section
 					.page__head
 						.page__icon
-							img(src="uploads/" alt="")
+							img(src="uploads/user-black.svg" alt="")
 						.page__title.h3= title
 					.page__body
-						.acc__head
-							.acc__title Заполните пожалуйста Ваши данные в профиле
-						.acc__body
-							.acc__list
-								.acc__item
-									.acc__name Ваше фото
-									.acc__inner
-										.acc__file.file
-											input.file__input(type="file")
-											label.file__wrap
-												span.file__img
-													img(src="uploads/" alt="")
-												span.file__bot
-													span.file__btn.btn.--sm.--b-gray Загрузить файл
-													span.file__desc Файл не выбран
-								.acc__item
-									.acc__name Ваш Email
-									.acc__inner
-										.acc__field.field.--smm.--b-gray
-											.field__wrap
-												input.field__area(type="text" name="" placeholder="Email")
-								.acc__item
-									.acc__name Полное имя
-									.acc__inner
-										.acc__field.field.--smm.--b-gray
-											.field__wrap
-												input.field__area(type="text" name="" placeholder="Иванов Сергей")
-								.acc__item
-									.acc__name Телефон
-									.acc__inner
-										.acc__field.field.--smm.--b-gray.--phone
-											.field__wrap
-												input.field__area(type="text" name="" placeholder="+7(999)999-99-99")
-										.acc__alert
-								.acc__item
-									.acc__name Вид спорта
-									.acc__inner
-										.acc__checkboxes
-											mixin accCheck(name)
-												.acc__checkbox.check.checkbox
-													input.check__input(type="checkbox" name="sport" value=name)
-													.checkbox__box
-													.checkbox__wrap= name
-											+accCheck('Фигурное катание')
-											+accCheck('Детское творчество')
-											+accCheck('Водные виды спорта')
-											+accCheck('Фехтование')
-											+accCheck('Флорбол')
-											+accCheck('Спорт для семьи')
-											+accCheck('Баскетбол')
-											+accCheck('Танцы')
-											+accCheck('Футзал')
-											+accCheck('Гимнастика')
-											+accCheck('Боевые единоборства')
-											+accCheck('Боевые единоборства')
-											+accCheck('Пляжный волейбол')
-											+accCheck('Большой теннис')
-											+accCheck('Хоккей')
-											+accCheck('Бадминтон')
-											+accCheck('Футбол')
+						.acc
+							.acc__head
+								.acc__title Заполните пожалуйста Ваши данные в профиле
+							.acc__body
+								.acc__list
+									.acc__item
+										.acc__name Ваше фото
+										.acc__inner
+											.acc__file.file
+												input.file__input(type="file")
+												.file__wrap
+													span.file__img
+														img(src="uploads/user-black.svg" alt="")
+													span.file__bot
+														label.file__btn.btn.--sm.--b-gray Загрузить файл
+														span.file__desc Файл не выбран
+									.acc__item
+										.acc__name Ваш Email
+										.acc__inner
+											.acc__field.field.--smm.--b-gray.--p20.--fz18
+												.field__wrap
+													input.field__area(type="text" name="" placeholder="Email")
+									.acc__item
+										.acc__name Полное имя
+										.acc__inner
+											.acc__field.field.--smm.--b-gray.--p20.--fz18
+												.field__wrap
+													input.field__area(type="text" name="" placeholder="Иванов Сергей")
+									.acc__item
+										.acc__name Телефон
+										.acc__inner
+											.acc__field.field.--smm.--b-gray.--p20.--fz18.--phone
+												.field__wrap
+													input.field__area(type="text" name="" placeholder="+7(999)999-99-99")
+											.acc__alert.--red Не активирован
+									.acc__item
+										.acc__name.--pt0 Вид спорта
+										.acc__inner
+											.acc__checkboxes
+												mixin accCheck(name)
+													.acc__checkbox.check.checkbox.--xs.--b-gray
+														input.check__input(type="checkbox" name="sport" value=name)
+														.checkbox__box
+															<svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.5455 1L5.54545 11L1 6.45455" stroke="#EB7001" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+														.checkbox__wrap= name
+												+accCheck('Фигурное катание')
+												+accCheck('Детское творчество')
+												+accCheck('Водные виды спорта')
+												+accCheck('Фехтование')
+												+accCheck('Флорбол')
+												+accCheck('Спорт для семьи')
+												+accCheck('Баскетбол')
+												+accCheck('Танцы')
+												+accCheck('Футзал')
+												+accCheck('Гимнастика')
+												+accCheck('Боевые единоборства')
+												+accCheck('Боевые единоборства')
+												+accCheck('Пляжный волейбол')
+												+accCheck('Большой теннис')
+												+accCheck('Хоккей')
+												+accCheck('Бадминтон')
+												+accCheck('Футбол')
 
-								.acc__item
-									.acc__name Адрес доставки
-									.acc__inner
-										.acc__groups.fgroup
-											.fgroup__list
-												.fgroup__item
-													.fgroup__name Почтовый индекс
-													.fgroup__inner
-														.fgroup__field.field.--smm.--b-gray
-															.field__wrap
-																input.field__area(type="text" name="" placeholder="435985")
-												.fgroup__item
-													.fgroup__name Город
-													.fgroup__inner
-														.fgroup__select.select.--smm.--bg-gray
-															.select__area
-																.select__title
-																.select__icon
-																	<svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.01733L5 5.23066L9 1.01733" stroke="#3F3F3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-															.select__drop
-															select.select__parse
-																option(value="Москва" selected="selected") Москва
-																option(value="Город 1") Город 1
-																option(value="Город 2") Город 2
-												.fgroup__item
-													.fgroup__name Адрес
-													.fgroup__inner
-														.fgroup__field.field.--smm.--b-gray.--w170
-															.field__wrap
-																input.field__area(type="text" name="" placeholder="Улица")
-														.fgroup__field.field.--smm.--b-gray
-															.field__wrap
-																input.field__area(type="text" name="" placeholder="Корп.")
-														.fgroup__field.field.--smm.--b-gray
-															.field__wrap
-																input.field__area(type="text" name="" placeholder="Дом")
+									.acc__item
+										.acc__name.--pt0 Адрес доставки
+										.acc__inner
+											.acc__groups.fgroup
+												.fgroup__list
+													.fgroup__item
+														.fgroup__name Почтовый индекс
+														.fgroup__inner
+															.fgroup__fields
+																.fgroup__field.field.--smm.--b-gray.--p20.--fz18
+																	.field__wrap
+																		input.field__area(type="text" name="" placeholder="435985")
+													.fgroup__item
+														.fgroup__name Город
+														.fgroup__inner
+															.fgroup__select.select.--smm.--b-gray.--p20.--fz18
+																.select__area
+																	.select__title
+																	.select__icon
+																		<svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.01733L5 5.23066L9 1.01733" stroke="#3F3F3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+																.select__drop
+																select.select__parse
+																	option(value="Москва" selected="selected") Москва
+																	option(value="Город 1") Город 1
+																	option(value="Город 2") Город 2
+													.fgroup__item
+														.fgroup__name Адрес
+														.fgroup__inner
+															.fgroup__fields
+																.fgroup__field.field.--smm.--b-gray.--p20.--fz18
+																	.field__wrap
+																		input.field__area(type="text" name="" placeholder="Улица")
+																.fgroup__field.field.--smm.--b-gray.--p20.--fz18.--w100
+																	.field__wrap
+																		input.field__area(type="text" name="" placeholder="Корп.")
+																.fgroup__field.field.--smm.--b-gray.--p20.--fz18.--w100
+																	.field__wrap
+																		input.field__area(type="text" name="" placeholder="Дом")
 
-								.acc__item
-									.acc__name Логин
-									.acc__inner
-										.acc__field.field.--smm.--b-gray
-											.field__wrap
-												input.field__area(type="text" name="" placeholder="")
-								.acc__item
-									.acc__name Пароль
-									.acc__inner
-										.acc__field.field.--smm.--b-gray.--mb
-											.field__wrap
-												input.field__area(type="password" name="" placeholder="")
-											.field__desc Новый пароль
-										.acc__field.field.--smm.--b-gray
-											.field__wrap
-												input.field__area(type="password" name="" placeholder="")
-											.field__desc Подтвердите пароль
-						.acc__foot
-							.acc__btns.row
-								.acc__btn.btn.--md.--bg-orange Сохранить
-								.acc__btn.btn.--md.--b-orange Выйти
+									.acc__item
+										.acc__name Логин
+										.acc__inner
+											.acc__field.field.--smm.--b-gray.--p20.--fz18
+												.field__wrap
+													input.field__area(type="text" name="" placeholder="Ivanov-S")
+									.acc__item
+										.acc__name Пароль
+										.acc__inner
+											.acc__field.field.--smm.--b-gray.--p20.--fz18.--mb
+												.field__wrap
+													input.field__area(type="password" name="" placeholder="")
+												.field__desc Новый пароль
+											.acc__field.field.--smm.--b-gray.--p20.--fz18
+												.field__wrap
+													input.field__area(type="password" name="" placeholder="")
+												.field__desc Подтвердите пароль
+							.acc__foot
+								.acc__btns.row
+									.acc__btn.btn.--md.--bg-orange.--fz18 Сохранить
+									.acc__btn.btn.--md.--b-orange.--fz18 Выйти

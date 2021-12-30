@@ -1,9 +1,10 @@
 extends ../../templates/default
 block vars
 	-
-		title = ""
+		title = 'Турнир по футболу "Baltic Cup 2021" среди команд 2013 г.р. (U8). Арена ЦФП "Восхождение" 02.10.2021'
 		breadcrumbs = [
-			['', '.html'],
+			['Фотосток', 'fotoskok.html'],
+			['Футбол', 'fotoskok-section.html'],
 			[title]
 		]
 block content
@@ -17,45 +18,83 @@ block content
 					include ../../../blocks/navus/navus
 				.page__section
 					.page__head
-						.page__icon
-							img(src="uploads/" alt="")
+						.page__icon.--gray.--no-border
+							img(src="uploads/sports/sport-football.png" alt="")
 						.page__title.h3= title
 					.page__body
+						.shooting
+							.shooting__img.img
+								img(src="uploads/operator.png" alt="")
+							.shooting__text
+								p Съемку производил Иванов Сергей Иванович
+								p Пожалуйста оцените его работу и оставьте свой комментарий
+								p Комментарии могут оставлять только авторизированные пользователи
+							a.shooting__btn-comment.btn.--md.--bg-orange.--fz24(href="") Оставить комментарий
+						.do
+							.do__list.row
+								.do__item
+									.do__icon
+										img(src="uploads/doc-ruble.svg" alt="")
+									.do__text Цены на скачивание и печать фото <br>можно посмотреть #[a(href="") здесь]
+
+								.do__item
+									.do__icon
+										img(src="uploads/puzzles.png" alt="")
+									.do__text С помощью нашего #[a(href="") конструктора] вы можете заказать сувинирную продукцию с любым понравившимся изображением вашего ребенка
+
+						.phs
+							.phs__list.row
+								a.phs__item(href="")
+									.phs__name #[span Командные фото]
+									.phs__img.img
+										img(src="uploads/ph-1.jpg" alt="")
+								a.phs__item(href="")
+									.phs__name #[span Игры турнира]
+									.phs__img.img
+										img(src="uploads/ph-2.jpg" alt="")
+								a.phs__item(href="")
+									.phs__name #[span Церимония награждения]
+									.phs__img.img
+										img(src="uploads/ph-3.jpg" alt="")
+
+
 						.comments
 							.comments__title Комментарии
 							.comments__wrap
 								.comments__new
 									.comments__avatar.img
-										img(src="uploads/" alt="")
+										img(src="uploads/user.jpg" alt="")
 									.comments__area
 										.comments__data
 											.comments__user Галина Миронова
 											.comments__controls.row
-												.comments__control
-												.comments__control
-												.comments__control
+												.comments__control.--thumb-up
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.83341 18.3333H3.33341C2.89139 18.3333 2.46746 18.1577 2.1549 17.8452C1.84234 17.5326 1.66675 17.1087 1.66675 16.6667V10.8333C1.66675 10.3913 1.84234 9.96738 2.1549 9.65482C2.46746 9.34226 2.89139 9.16667 3.33341 9.16667H5.83341M11.6667 7.5V4.16667C11.6667 3.50363 11.4034 2.86774 10.9345 2.3989C10.4657 1.93006 9.82979 1.66667 9.16675 1.66667L5.83341 9.16667V18.3333H15.2334C15.6354 18.3379 16.0254 18.197 16.3317 17.9367C16.6379 17.6763 16.8398 17.3141 16.9001 16.9167L18.0501 9.41667C18.0863 9.1778 18.0702 8.9339 18.0029 8.70188C17.9355 8.46985 17.8185 8.25525 17.66 8.07293C17.5014 7.89061 17.3051 7.74494 17.0847 7.64601C16.8643 7.54709 16.625 7.49726 16.3834 7.5H11.6667Z" stroke="#EB7001" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+												.comments__control.--thumb-down
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.1667 1.66662H16.3917C16.8633 1.65828 17.3216 1.8234 17.6795 2.13063C18.0375 2.43787 18.2701 2.86583 18.3334 3.33328V9.16662C18.2701 9.63407 18.0375 10.062 17.6795 10.3693C17.3216 10.6765 16.8633 10.8416 16.3917 10.8333H14.1667M8.33336 12.4999V15.8333C8.33336 16.4963 8.59675 17.1322 9.06559 17.601C9.53443 18.0699 10.1703 18.3333 10.8334 18.3333L14.1667 10.8333V1.66662H4.76669C4.36475 1.66207 3.97471 1.80295 3.66844 2.06328C3.36216 2.32361 3.16029 2.68586 3.10003 3.08328L1.95003 10.5833C1.91377 10.8222 1.92988 11.066 1.99724 11.2981C2.0646 11.5301 2.18161 11.7447 2.34014 11.927C2.49868 12.1093 2.69496 12.255 2.91538 12.3539C3.13581 12.4529 3.3751 12.5027 3.61669 12.4999H8.33336Z" stroke="#EB7001" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+												.comments__control.--write
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="#39ABD7"/><path d="M12.5649 5.4178C12.6974 5.28534 12.8546 5.18027 13.0277 5.10858C13.2007 5.0369 13.3862 5 13.5735 5C13.7609 5 13.9464 5.0369 14.1194 5.10858C14.2925 5.18027 14.4497 5.28534 14.5822 5.4178C14.7147 5.55026 14.8197 5.70751 14.8914 5.88057C14.9631 6.05364 15 6.23913 15 6.42645C15 6.61377 14.9631 6.79926 14.8914 6.97233C14.8197 7.14539 14.7147 7.30265 14.5822 7.4351L7.7738 14.2435L5 15L5.75649 12.2262L12.5649 5.4178Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg>
 											.comments__date 22 октября 2021 г. 16.35
-										.comments__field.field
+										.comments__field.field.--b-gray
 											.field__wrap
-												textarea.field__area(name="")
-												.field__placeholder Написать комментарий
+												textarea.field__area(name="" placeholder="Написать комментарий")
 										.comments__btns.row
-											button.comments__btn.btn.--md.--bg-orange Ответить
-											button.comments__btn.btn.--md.--b-red Удалить
+											button.comments__btn.btn.--smm.--bg-orange Ответить
+											button.comments__btn.btn.--smm.--bg-white.--b-red Удалить
 								.comments__list
 									.comments__item
 										.comments__avatar.img
-											img(src="uploads/" alt="")
+											img(src="uploads/user.jpg" alt="")
 										.comments__area
 											.comments__data
 												.comments__user Галина Миронова
 												.comments__controls.row
-													.comments__control
-													.comments__control
-													.comments__control
+													.comments__control.--write
+														<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="#39ABD7"/><path d="M12.5649 5.4178C12.6974 5.28534 12.8546 5.18027 13.0277 5.10858C13.2007 5.0369 13.3862 5 13.5735 5C13.7609 5 13.9464 5.0369 14.1194 5.10858C14.2925 5.18027 14.4497 5.28534 14.5822 5.4178C14.7147 5.55026 14.8197 5.70751 14.8914 5.88057C14.9631 6.05364 15 6.23913 15 6.42645C15 6.61377 14.9631 6.79926 14.8914 6.97233C14.8197 7.14539 14.7147 7.30265 14.5822 7.4351L7.7738 14.2435L5 15L5.75649 12.2262L12.5649 5.4178Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg>
 												.comments__date 22 октября 2021 г. 16.35
 											.comments__text
 												.comments__text-inner Прекрасная съемка. Отличные фото.
 												.comments__text-like
+													<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.83341 18.3333H3.33341C2.89139 18.3333 2.46746 18.1577 2.1549 17.8452C1.84234 17.5326 1.66675 17.1087 1.66675 16.6667V10.8333C1.66675 10.3913 1.84234 9.96738 2.1549 9.65482C2.46746 9.34226 2.89139 9.16667 3.33341 9.16667H5.83341M11.6667 7.5V4.16667C11.6667 3.50363 11.4034 2.86774 10.9345 2.3989C10.4657 1.93006 9.82979 1.66667 9.16675 1.66667L5.83341 9.16667V18.3333H15.2334C15.6354 18.3379 16.0254 18.197 16.3317 17.9367C16.6379 17.6763 16.8398 17.3141 16.9001 16.9167L18.0501 9.41667C18.0863 9.1778 18.0702 8.9339 18.0029 8.70188C17.9355 8.46985 17.8185 8.25525 17.66 8.07293C17.5014 7.89061 17.3051 7.74494 17.0847 7.64601C16.8643 7.54709 16.625 7.49726 16.3834 7.5H11.6667Z" stroke="#EB7001" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
 											.comments__btns.row
-												button.comments__btn.btn.--md.--b-red Удалить
+												button.comments__btn.btn.--smm.--bg-white.--b-red Удалить

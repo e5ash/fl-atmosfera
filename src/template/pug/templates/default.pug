@@ -6,11 +6,13 @@ html(lang="ru")
 		meta(charset="UTF-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
 		title=title
-	body
+	body(class=bodyClass)
 		.wrap
 			script(src="https://unpkg.com/imask")
 			link(rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css")
+			link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css")
 			link(rel="stylesheet" href="template/css/style.css" + version)
+			link(rel="stylesheet" href="template/css/responsive.css" + version)
 
 			+style('header', 'blocks')
 			include ../../blocks/header/header
@@ -25,6 +27,8 @@ html(lang="ru")
 			+script('check', 'components')
 			+script('select', 'components')
 			+script('popup', 'components')
+			+script('tabs', 'components')
 
 			script(src="https://unpkg.com/swiper@7/swiper-bundle.min.js")
+			script(src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js")
 			script(src="template/js/common.js" + version)
