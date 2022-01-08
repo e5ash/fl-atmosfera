@@ -187,6 +187,10 @@
   }
 }
 @media screen and (max-width: 1170px) {
+  .wrap {
+    overflow-x: hidden;
+  }
+
   .case {
     max-width: 960px;
   }
