@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 	}
 	let calendarDays = document.querySelectorAll('.calendar__day');
 	if (calendarDays) {
-		calendarDays.current = null;
+		calendarDays.current = document.querySelector('.calendar__day.--current');
 		calendarDays.forEach((day)=>{
 			day.addEventListener('click', ()=>{
 				if (calendarDays.current) {
@@ -292,23 +292,39 @@ document.addEventListener('DOMContentLoaded', ()=>{
 			calendar.ev.img   = calendar.ev.block.querySelector('.calev__img img');
 			calendar.ev.close = calendar.ev.block.querySelector('.calev__close');
 			calendar.ev.data  = calendar.ev.block.querySelector('.calev__data');
+      calendar.ne = calendar.querySelector('.ne');
+      calendar.ne.close = calendar.ne.querySelector('.ne__close');
+      calendar.ne.btn = calendar.ne.querySelector('.ne__btn');
 
 			calendar.addEventListener('click', (e)=>{
 				
-				let day = e.target.closest('.cal__event');
-				if (day) {
+				let event = e.target.closest('.cal__event');
+        let d = e.target.closest('.cal__day')
+				if (event) {
 					calendar.ev.block.classList.add('--show');
-					let img  = day.querySelector('.cal__event-img img');
-					let data = day.querySelector('.cal__event-data');
+					let img  = event.querySelector('.cal__event-img img');
+					let data = event.querySelector('.cal__event-data');
 
 					calendar.ev.img.src = img.src;
 					calendar.ev.data.innerHTML = data.innerHTML;
 				}
+
+        if (d && !event) {
+          calendar.ne.classList.add('--show');
+        }
 			});
 
 			calendar.ev.close.addEventListener('click', ()=>{
 				calendar.ev.block.classList.remove('--show');
 			})
+      
+      calendar.ne.close.addEventListener('click', ()=>{
+        calendar.ne.classList.remove('--show');
+      });
+
+      calendar.ne.btn.addEventListener('click', ()=>{
+        calendar.ne.classList.remove('--show');
+      });
 		});
 	}
 
@@ -353,4 +369,42 @@ document.addEventListener('DOMContentLoaded', ()=>{
 	// 	window.addEventListener('scroll', addPaddingToAside);
 		
 	// }
-});
+  let photos = document.querySelectorAll('.photos__img');
+  if (photos) {
+    photos.forEach((photo)=>{
+      photo.addEventListener('click', (e)=>{
+        if (window.innerWidth < 768) {
+          e.preventDefault();
+        }
+      });
+    });
+  }
+
+
+  let comments = document.querySelector('.comments');
+  let btnToComments = document.querySelectorAll('.btn-go-comment');
+  if (btnToComments) {
+    btnToComments.forEach((btn)=>{
+      btn.addEventListener('click', (e)=>{
+        e.preventDefault();
+        comments.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+
+    });
+  }
+
+  let review = document.querySelector('.review');
+  let btnToReview = document.querySelectorAll('.btn-go-review')
+  if (btnToReview) {
+    btnToReview.forEach((btn)=>{
+      btn.addEventListener('click', (e)=>{
+        e.preventDefault();
+        btn.style.display = 'none';
+        review.classList.add('--show');
+      });
+    });
+  }
+}); 

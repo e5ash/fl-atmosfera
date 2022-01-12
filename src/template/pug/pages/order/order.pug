@@ -22,7 +22,7 @@ block content
 						.page__title.h3= title
 					.page__body
 						.order
-							.order__wrap
+							form.order__wrap
 								.order__list
 									.order__item
 										.order__item-head
@@ -98,25 +98,25 @@ block content
 										.ocart__img.img
 											img(src="uploads/ph-1.jpg" alt="")
 										.ocart__name Фото цифровое
-										.ocart__incdec.incdec
+										form.ocart__incdec.incdec
 											button.incdec__btn.btn.--minus
 											.incdec__field.field.--num
 												.field__wrap
-													input.field__area(type="tel" value="1")
+													input.field__area(type="number" value="1")
 											button.incdec__btn.btn.--plus
 										.ocart__price 100 #[b ₽]
 									.ocart__item
 										.ocart__img.img
 											img(src="uploads/ph-2.jpg" alt="")
 										.ocart__name Брелок
-										.ocart__incdec.incdec
+										form.ocart__incdec.incdec
 											button.incdec__btn.btn.--minus
 											.incdec__field.field
 												.field__wrap
-													input.field__area(type="tel" value="1")
+													input.field__area(type="number" value="1")
 											button.incdec__btn.btn.--plus
 										.ocart__price 250 #[b ₽]
 								.ocart__total
 									.ocart__total-title Итого
 									.ocart__total-value 350 #[b ₽]
-								button.ocart__btn-next.btn.--md.--bg-orange Продолжить покупки
+								a.ocart__btn-next.btn.--md.--bg-orange(href="") Продолжить покупки

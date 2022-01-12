@@ -1,101 +1,101 @@
 extends ../../templates/default
 block vars
-	-
-		title = "Календарь турниров"
-		breadcrumbs = [
-			['', '.html'],
-			[title]
-		]
+  -
+    title = "Календарь турниров"
+    breadcrumbs = [
+      ['', '.html'],
+      [title]
+    ]
 block content
-	include ../../../blocks/intro/intro
-	include ../../../blocks/sports/sports
-	.page
-		.case
-			// +breadcrumbs
-			.page__wrap.row
-				.page__aside
-					include ../../../blocks/navus/navus
-				.page__section
-					.page__head
-						.page__icon
-							img(src="uploads/calendar-black.png" alt="")
-						.page__title.h3= title
-					.page__body
+  include ../../../blocks/intro/intro
+  include ../../../blocks/sports/sports
+  .page
+    .case
+      // +breadcrumbs
+      .page__wrap.row
+        .page__aside
+          include ../../../blocks/navus/navus
+        .page__section
+          .page__head
+            .page__icon
+              img(src="uploads/calendar-black.png" alt="")
+            .page__title.h3= title
+          .page__body
 
-						.clndr
-							.clndr__sort.sort
-								.sort__title Сортировка
-								.sort__list
-									.sort__item
-										.sort__name По году
-										.sort__select.select.--sm.--bg-gray.--p20.--radius
-											.select__wrap
-												.select__area
-													.select__title
-													.select__icon
-														<svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.01733L5 5.23066L9 1.01733" stroke="#3F3F3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-												.select__drop
-												select.select__parse
-													option(value="2021") 2021
-													option(value="2020") 2020
-													option(value="2019") 2019
-									.sort__item
-										.sort__name По месяцу
-										.sort__select.select.--sm.--bg-gray.--p20.--radius
-											.select__wrap
-												.select__area
-													.select__title
-													.select__icon
-														<svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.01733L5 5.23066L9 1.01733" stroke="#3F3F3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-												.select__drop
-												select.select__parse
-													option(value="август") август
-													option(value="сентярбрь") сентярбрь
-													option(value="октябрь") октябрь
-													option(value="ноябрь") ноябрь
-									.sort__item
-										.sort__name По дате
-										.sort__select.select.--sm.--bg-gray.--p20.--radius
-											.select__wrap
-												.select__area
-													.select__title
-													.select__icon
-														<svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.01733L5 5.23066L9 1.01733" stroke="#3F3F3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-												.select__drop
-												select.select__parse
-													option(value="Все") Все
-													option(value="Итем 1") Итем 1
-													option(value="Итем 2") Итем 2
-													option(value="Итем 3") Итем 3
-							.clndr__sort.sort
-								.sort__list
-									.sort__item.--w385
-										.sort__name По виду спорта
-										.sort__select.select.--sm.--bg-gray.--p20.--radius
-											.select__wrap
-												.select__area
-													.select__title
-													.select__icon
-														<svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.01733L5 5.23066L9 1.01733" stroke="#3F3F3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-												.select__drop
-												select.select__parse
-													option(value="Все" selected="selected") Все
-													option(value="Гандбол") Гандбол
-													option(value="Футбол") Футбол
-													option(value="Флорбол") Флорбол
-													option(value="Водные виды спорта") Водные виды спорта
-													option(value="Фигурное катание") Фигурное катание
-													option(value="Пляжный волейбол") Пляжный волейбол
-													option(value="Танцы") Танцы
-													option(value="Фехтование") Фехтование
-													option(value="Большой тенис") Большой тенис
-													option(value="Хокей") Хокей
-													option(value="Футзал") Футзал
-													option(value="Гимнастика") Гимнастика
-													option(value="Баскетбол") Баскетбол
-													option(value="Боевые единоборства") Боевые единоборства
-													option(value="Бадминтон") Бадминтон
-													option(value="Спорт для семьи") Спорт для семьи
-													option(value="Детское творчество") Детское творчество
-							
-							+cal('Декабрь 2021', '--md')
+            .clndr
+              .clndr__sort.sort
+                .sort__title Сортировка
+                .sort__list
+                  .sort__item
+                    .sort__name По году
+                    .sort__select.select.--sm.--bg-gray.--p20.--radius
+                      .select__wrap
+                        .select__area
+                          .select__title
+                          .select__icon
+                            <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.01733L5 5.23066L9 1.01733" stroke="#3F3F3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        .select__drop
+                        select.select__parse
+                          option(value="2021") 2021
+                          option(value="2020") 2020
+                          option(value="2019") 2019
+                  .sort__item
+                    .sort__name По месяцу
+                    .sort__select.select.--sm.--bg-gray.--p20.--radius
+                      .select__wrap
+                        .select__area
+                          .select__title
+                          .select__icon
+                            <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.01733L5 5.23066L9 1.01733" stroke="#3F3F3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        .select__drop
+                        select.select__parse
+                          option(value="август") август
+                          option(value="сентярбрь") сентярбрь
+                          option(value="октябрь") октябрь
+                          option(value="ноябрь") ноябрь
+                  .sort__item
+                    .sort__name По дате
+                    .sort__select.select.--sm.--bg-gray.--p20.--radius
+                      .select__wrap
+                        .select__area
+                          .select__title
+                          .select__icon
+                            <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.01733L5 5.23066L9 1.01733" stroke="#3F3F3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        .select__drop
+                        select.select__parse
+                          option(value="Все") Все
+                          option(value="Итем 1") Итем 1
+                          option(value="Итем 2") Итем 2
+                          option(value="Итем 3") Итем 3
+              .clndr__sort.sort
+                .sort__list
+                  .sort__item.--w385
+                    .sort__name По виду спорта
+                    .sort__select.select.--sm.--bg-gray.--p20.--radius
+                      .select__wrap
+                        .select__area
+                          .select__title
+                          .select__icon
+                            <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.01733L5 5.23066L9 1.01733" stroke="#3F3F3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        .select__drop
+                        select.select__parse
+                          option(value="Все" selected="selected") Все
+                          option(value="Гандбол") Гандбол
+                          option(value="Футбол") Футбол
+                          option(value="Флорбол") Флорбол
+                          option(value="Водные виды спорта") Водные виды спорта
+                          option(value="Фигурное катание") Фигурное катание
+                          option(value="Пляжный волейбол") Пляжный волейбол
+                          option(value="Танцы") Танцы
+                          option(value="Фехтование") Фехтование
+                          option(value="Большой тенис") Большой тенис
+                          option(value="Хокей") Хокей
+                          option(value="Футзал") Футзал
+                          option(value="Гимнастика") Гимнастика
+                          option(value="Баскетбол") Баскетбол
+                          option(value="Боевые единоборства") Боевые единоборства
+                          option(value="Бадминтон") Бадминтон
+                          option(value="Спорт для семьи") Спорт для семьи
+                          option(value="Детское творчество") Детское творчество
+              
+              +cal('Декабрь 2021', '--md', true)
